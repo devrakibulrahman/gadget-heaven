@@ -12,6 +12,9 @@ const Home = () => {
                                     <div className="w-full max-w-[790px] text-center">
                                         <p className="font-sora text-sm leading-[22px] font-light text-[#FFFFFF] md:text-base md:leading-[26px]">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                                     </div>
+                                    <div className="w-full flex items-center justify-center mt-4 md:mt-5 lg:mt-6 xl:mt-8">
+                                        <button className="py-3 px-6 bg-white rounded-full font-sora text-sm leading-[26px] font-bold text-[#9538E2] md:text-base lg:text-xl md:py-[15px] md:px-[28px] lg:px-[30px]">Shop now</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
