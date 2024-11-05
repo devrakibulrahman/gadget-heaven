@@ -13,8 +13,8 @@ const Navbar = () => {
     return (
         <div className={`relative w-full min-h-[20px] transition ${pageLocation.pathname === '/' ? 'md:pt-[30px] duration-300 ease-in-out' : 'md:pt-0 duration-300 ease-in-out'}`}>
             <div className={`w-full min-h-[10px] ${pageLocation.pathname === '/' ? 'px-[15px]' : 'px-0'}`}>
-                <div className={`w-full max-w-[1920px] mx-auto min-h-[10px] ${pageLocation.pathname === '/' ? 'md:p-[8px] border-l border-r border-[#e0e0e0] md:border pl-[6px] pr-[6px] md:rounded-2xl' : 'md:p-0'}`}>
-                    <div className={`w-full transition ${pageLocation.pathname === '/' ? 'bg-[#9538E2] duration-300 ease-in-out' : 'bg-none duration-300 ease-in-out'} md:rounded-2xl`}>
+                <div className={`w-full max-w-[1920px] mx-auto min-h-[10px] ${pageLocation.pathname === '/' ? 'border-t border-l border-r border-[#e0e0e0] pl-[6px] pr-[6px] md:rounded-tr-2xl md:rounded-tl-2xl md:pt-[8px]' : 'md:p-0'}`}>
+                    <div className={`w-full transition ${pageLocation.pathname === '/' ? 'bg-[#9538E2] duration-300 ease-in-out' : 'bg-none duration-300 ease-in-out'} md:rounded-tl-2xl md:rounded-tr-2xl`}>
                         <div className="container mx-auto px-4">
                             <div className="w-full py-[25px] flex items-center justify-between md:py-[30px]">
                                 <div className="w-auto">

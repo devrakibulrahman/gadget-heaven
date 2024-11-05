@@ -1,7 +1,7 @@
 
 const Home = () => {
     return (
-        <div>
+        <div className="relative w-full min-h-[100px] px-[15px]">
             
         </div>
     );
