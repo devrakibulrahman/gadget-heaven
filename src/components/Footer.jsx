@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="w-full bg-white py-[50px]">
+        <div className="w-full bg-white pt-[50px]">
             <div className="container mx-auto px-4">
                 <div className="w-full">
                     <div className="w-full mb-[20px] text-center md:mb-[30px]">
@@ -58,7 +58,7 @@ const Footer = () => {
                                 <i className="ri-linkedin-box-fill text-2xl text-white"></i>
                             </div>
                         </div>
-                        <div className="w-full pt-[30px] text-center">
+                        <div className="w-full pt-[40px] pb-[30px] text-center">
                             <p className="font-sora text-sm leading-[30px] font-normal text-[#09080F]/30">Copyright &copy; 2024 - {new Date().getFullYear()} Gadget Heaven All Rights Reserved.</p>
                         </div>
                     </div>
