@@ -1,3 +1,4 @@
+import ProductItems from "../components/ProductItems";
 
 const Home = () => {
     return (
@@ -28,6 +29,11 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="w-full">
+                <div className="container mx-auto px-4">
+                    <ProductItems></ProductItems>
                 </div>
             </div>
         </div>
