@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         sora: ["Sora", "sans-serif"]
       },
+      backgroundImage: {
+        'banner': 'url(./assets/img/banner.jpg)'
+      }
     },
   },
   plugins: [],
