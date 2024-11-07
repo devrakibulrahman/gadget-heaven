@@ -1,0 +1,139 @@
+[
+    {
+      "product_id": "001",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://example.com/images/s23_ultra.jpg",
+      "category": "Smartphones",
+      "price": 1199.99,
+      "description": "The Samsung Galaxy S23 Ultra comes with a powerful Snapdragon processor, high-resolution display, and advanced camera technology.",
+      "Specification": [
+        "6.8-inch Dynamic AMOLED display",
+        "5000mAh battery",
+        "Quad rear camera setup (200 MP main)",
+        "12 GB RAM",
+        "512 GB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "002",
+      "product_title": "Samsung Galaxy S24 Ultra",
+      "product_image": "https://example.com/images/s24_ultra.jpg",
+      "category": "Smartphones",
+      "price": 1299.99,
+      "description": "The next-gen Samsung Galaxy S24 Ultra offers cutting-edge performance, superior camera systems, and a sleek design.",
+      "Specification": [
+        "6.9-inch Dynamic AMOLED display",
+        "6000mAh battery",
+        "Quad rear camera setup (250 MP main)",
+        "16 GB RAM",
+        "1 TB storage"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "003",
+      "product_title": "Google Pixel 9 Pro XL",
+      "product_image": "https://example.com/images/pixel_9_pro_xl.jpg",
+      "category": "Smartphones",
+      "price": 1099.99,
+      "description": "Google Pixel 9 Pro XL features an enhanced camera system and optimized performance with the latest Android software.",
+      "Specification": [
+        "6.7-inch OLED display",
+        "5000mAh battery",
+        "Triple rear camera setup",
+        "12 GB RAM",
+        "256 GB storage"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "004",
+      "product_title": "Google Pixel 9",
+      "product_image": "https://example.com/images/pixel_9.jpg",
+      "category": "Smartphones",
+      "price": 899.99,
+      "description": "Google Pixel 9 brings the best of Google's camera software and AI features in a compact form.",
+      "Specification": [
+        "6.4-inch OLED display",
+        "4600mAh battery",
+        "Dual rear camera setup",
+        "8 GB RAM",
+        "128 GB storage"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "005",
+      "product_title": "Google Pixel 9 Pro",
+      "product_image": "https://example.com/images/pixel_9_pro.jpg",
+      "category": "Smartphones",
+      "price": 999.99,
+      "description": "Google Pixel 9 Pro combines powerful hardware and Google's best camera software for professional-level photography.",
+      "Specification": [
+        "6.5-inch OLED display",
+        "4800mAh battery",
+        "Triple rear camera setup",
+        "12 GB RAM",
+        "256 GB storage"
+      ],
+      "availability": false,
+      "rating": 4.5
+    },
+    {
+      "product_id": "006",
+      "product_title": "iPhone 16",
+      "product_image": "https://example.com/images/iphone_16.jpg",
+      "category": "Smartphones",
+      "price": 1399.99,
+      "description": "iPhone 16 features Apple's latest technology, offering unparalleled performance and camera quality.",
+      "Specification": [
+        "6.7-inch Super Retina XDR display",
+        "4500mAh battery",
+        "Triple rear camera with LiDAR",
+        "A18 Bionic chip",
+        "512 GB storage"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "007",
+      "product_title": "iPhone 14",
+      "product_image": "https://example.com/images/iphone_14.jpg",
+      "category": "Smartphones",
+      "price": 799.99,
+      "description": "iPhone 14 offers excellent performance with the A15 Bionic chip and a brilliant camera setup.",
+      "Specification": [
+        "6.1-inch Super Retina XDR display",
+        "3800mAh battery",
+        "Dual rear camera setup",
+        "A15 Bionic chip",
+        "256 GB storage"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "008",
+      "product_title": "iPhone 15",
+      "product_image": "https://example.com/images/iphone_15.jpg",
+      "category": "Smartphones",
+      "price": 899.99,
+      "description": "iPhone 15 brings new features such as Dynamic Island and improved battery life with an upgraded camera.",
+      "Specification": [
+        "6.1-inch Super Retina XDR display",
+        "4000mAh battery",
+        "Dual rear camera setup",
+        "A16 Bionic chip",
+        "256 GB storage"
+      ],
+      "availability": true,
+      "rating": 4.5
+    }
+  ]
+  
