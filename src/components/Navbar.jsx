@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div className={`w-full ${pathname === '/' && 'px-4 md:pt-[30px]'}`}>
             <div className={`w-full ${pathname === '/' && 'pl-[6px] pr-[6px] border-l border-r border-[#e2e2e2] md:border-t md:pt-[6px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl'} `}>
-                <div className={`w-full py-[30px] ${pathname === '/' ? 'bg-[#9538E2] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl' : 'bg-none'} relative`}>
+                <div className={`w-full py-[30px] ${pathname === '/' ? 'bg-[#9538E2] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl' : 'bg-white'} relative`}>
                     <div className='container mx-auto px-4'>
                         <div className={`w-full flex items-center justify-between`}>
                             <div className={`w-auto`}>
