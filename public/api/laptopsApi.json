@@ -1,0 +1,105 @@
+[
+    {
+      "product_id": "101",
+      "product_title": "Surface Laptop Studio 2",
+      "product_image": "https://example.com/images/surface_laptop_studio_2.jpg",
+      "category": "Laptops",
+      "price": 2499.99,
+      "description": "The Surface Laptop Studio 2 is a versatile device offering a seamless transition between laptop, stage, and studio modes, with high performance for professional tasks.",
+      "Specification": [
+        "14.4-inch PixelSense touchscreen display",
+        "Intel Core i7 13th Gen processor",
+        "32 GB RAM",
+        "1 TB SSD",
+        "NVIDIA GeForce RTX 4060 GPU"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "102",
+      "product_title": "Surface Laptop Go 3",
+      "product_image": "https://example.com/images/surface_laptop_go_3.jpg",
+      "category": "Laptops",
+      "price": 799.99,
+      "description": "Surface Laptop Go 3 is a lightweight and portable laptop designed for everyday tasks with a responsive touch display.",
+      "Specification": [
+        "12.4-inch PixelSense touchscreen display",
+        "Intel Core i5 12th Gen processor",
+        "8 GB RAM",
+        "256 GB SSD",
+        "Integrated Intel Iris Xe graphics"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "103",
+      "product_title": "Microsoft Surface Laptop 7th Edition",
+      "product_image": "https://example.com/images/surface_laptop_7.jpg",
+      "category": "Laptops",
+      "price": 1399.99,
+      "description": "The 7th Edition of the Microsoft Surface Laptop offers powerful performance and a sleek design ideal for work and play.",
+      "Specification": [
+        "13.5-inch PixelSense display",
+        "Intel Core i7 11th Gen processor",
+        "16 GB RAM",
+        "512 GB SSD",
+        "Integrated Intel Iris Plus graphics"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "104",
+      "product_title": "MacBook Pro M3",
+      "product_image": "https://example.com/images/macbook_pro_m3.jpg",
+      "category": "Laptops",
+      "price": 2999.99,
+      "description": "The MacBook Pro M3 is equipped with the latest Apple Silicon chip for unrivaled performance and power efficiency, perfect for intensive professional use.",
+      "Specification": [
+        "16-inch Liquid Retina XDR display",
+        "Apple M3 chip",
+        "32 GB unified memory",
+        "1 TB SSD",
+        "16-core GPU"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "105",
+      "product_title": "MacBook Air",
+      "product_image": "https://example.com/images/macbook_air.jpg",
+      "category": "Laptops",
+      "price": 1099.99,
+      "description": "The MacBook Air is known for its thin and lightweight design, featuring Apple's M-series chip for smooth multitasking and efficiency.",
+      "Specification": [
+        "13.6-inch Liquid Retina display",
+        "Apple M2 chip",
+        "16 GB unified memory",
+        "512 GB SSD",
+        "10-core GPU"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "106",
+      "product_title": "MacBook Pro",
+      "product_image": "https://example.com/images/macbook_pro.jpg",
+      "category": "Laptops",
+      "price": 1999.99,
+      "description": "The MacBook Pro offers powerful performance with the M-series chip, excellent display quality, and advanced audio features.",
+      "Specification": [
+        "14-inch Liquid Retina XDR display",
+        "Apple M2 Pro chip",
+        "16 GB unified memory",
+        "512 GB SSD",
+        "12-core GPU"
+      ],
+      "availability": true,
+      "rating": 4.8
+    }
+  ]
+  
