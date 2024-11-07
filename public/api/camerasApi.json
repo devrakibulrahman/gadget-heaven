@@ -1,0 +1,54 @@
+[
+    {
+      "product_id": "201",
+      "product_title": "Sony Alpha 1 (A1)",
+      "product_image": "https://example.com/images/sony_alpha_a1.jpg",
+      "category": "Cameras",
+      "price": 6499.99,
+      "description": "The Sony Alpha 1 (A1) is a flagship full-frame mirrorless camera offering exceptional speed, high resolution, and professional-level video capabilities.",
+      "Specification": [
+        "50.1 MP full-frame stacked Exmor RS CMOS sensor",
+        "8K 30p and 4K 120p video recording",
+        "30 fps continuous shooting",
+        "759-point phase-detection AF system",
+        "5-axis in-body image stabilization"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "202",
+      "product_title": "Sony A7R V",
+      "product_image": "https://example.com/images/sony_a7r_v.jpg",
+      "category": "Cameras",
+      "price": 3899.99,
+      "description": "The Sony A7R V is known for its high-resolution imaging, advanced autofocus system, and superb dynamic range, perfect for detailed photography.",
+      "Specification": [
+        "61 MP full-frame back-illuminated Exmor R CMOS sensor",
+        "4K 60p video recording",
+        "Next-gen AI-based autofocus",
+        "10 fps continuous shooting",
+        "5.5-stop in-body image stabilization"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "203",
+      "product_title": "Nikon Z9",
+      "product_image": "https://example.com/images/nikon_z9.jpg",
+      "category": "Cameras",
+      "price": 5499.99,
+      "description": "The Nikon Z9 is a professional full-frame mirrorless camera with groundbreaking features, designed for both photography and video professionals.",
+      "Specification": [
+        "45.7 MP full-frame stacked CMOS sensor",
+        "8K 30p and 4K 120p video recording",
+        "20 fps RAW continuous shooting",
+        "493-point phase-detection AF system",
+        "Dual CFexpress Type B card slots"
+      ],
+      "availability": true,
+      "rating": 4.9
+    }
+  ]
+  
