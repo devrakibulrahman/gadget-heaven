@@ -2,83 +2,79 @@ import 'remixicon/fonts/remixicon.css';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
-const Navbar = () => {
-    const [isNavActive, setIsNavActive] = useState(false);
-    const pageLocation = useLocation();
 
-    const handleNav = () => {
-        setIsNavActive(!isNavActive);
+const Navbar = () => {
+    // all hooks declaration ----------------------------------->
+    const [isNavActive, setIsNavActive] = useState(false);
+    const location = useLocation();
+
+    // all destructure array and object ------------------------>
+    const {pathname} = location;
+
+    // all function declaration -------------------------------->
+    const handleNavActive = () => {
+        setIsNavActive(!isNavActive)
     };
 
     return (
-        <div className={`relative w-full min-h-[20px] ${pageLocation.pathname === '/' ? 'md:pt-[30px]' : 'md:pt-0'}`}>
-            <div className={`w-full min-h-[10px] ${pageLocation.pathname === '/' ? 'px-[15px]' : 'px-0'}`}>
-                <div className={`w-full min-h-[10px] ${pageLocation.pathname === '/' ? 'border-l border-r border-[#e0e0e0] pl-[6px] pr-[6px] md:rounded-tr-2xl md:rounded-tl-2xl md:pt-[8px] md:border-t' : 'md:p-0'}`}>
-                    <div className={`w-full ${pageLocation.pathname === '/' ? 'bg-[#9538E2]' : 'bg-none'} md:rounded-tl-2xl md:rounded-tr-2xl`}>
-                        <div className="container mx-auto px-4">
-                            <div className="w-full py-[25px] flex items-center justify-between md:py-[30px]">
-                                <div className="w-auto">
-                                    <h1 className={`font-sora text-xl leading-[25px] font-bold ${pageLocation.pathname === '/' ? 'text-white' : 'text-[#0B0B0B]'}`}>Gadget Heaven</h1>
-                                </div>
-                                <div className='w-auto hidden md:block'>
-                                    <nav className='w-auto'>
-                                        <ul className='w-auto flex items-center justify-center md:gap-x-[24px] lg:gap-x-[38px] xl:gap-x-[48px]'>
-                                            <NavLink to='/' className={`font-sora text-base leading-[20px] ${pageLocation.pathname === '/' ? 'font-bold underline text-white' : (pageLocation.pathname === '/' || 'font-medium text-[#0B0B0BB3]')}`}>Home</NavLink>
-                                            <NavLink to='/statistics' className={`font-sora text-base leading-[20px] ${pageLocation.pathname === '/statistics' ? 'font-bold text-[#9538E2]' : (pageLocation.pathname === '/' ? 'font-medium text-white' : 'font-medium text-[#0B0B0BB3]')}`}>Statistics</NavLink>
-                                            <NavLink to='/dashboard' className={`font-sora text-base leading-[20px] ${pageLocation.pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : (pageLocation.pathname === '/' ? 'font-medium text-white' : 'font-medium text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div className='w-auto flex items-center justify-center gap-x-2 sm:gap-x-5 md:flex md:items-center md:justify-center md:gap-x-4'>
-                                    <div className='w-auto flex items-center justify-center gap-x-2'>
-                                        <div className='relative w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#ffffff] border border-[#dbdbdbb] rounded-full flex items-center justify-center cursor-pointer md:bg-[#ffffff] md:border-[#0B0B0B1A]'>
-                                            <i className={`ri-shopping-cart-line text-sm md:text-xl ${pageLocation.pathname === '/' ? 'text-[#9538E2]' : 'md:text-[#0B0B0B]'}`}></i>
-                                            <div className={`w-[16px] h-[16px] bg-white rounded-full border absolute top-[-5px] right-[-3px] flex items-center justify-center ${pageLocation.pathname === '/' ? 'md:border-[#9538E8]' : 'md:border-[#0B0B0B1A]'}`}>
-                                                <span className={`font-sora text-[10px] ${pageLocation.pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>0</span>
-                                            </div>
-                                        </div>
-                                        <div className='relative w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#ffffff] border border-[#dbdbdbb] rounded-full flex items-center justify-center cursor-pointer md:bg-[#ffffff] md:border-[#0B0B0B1A]'>
-                                            <i className={`ri-heart-line text-sm md:text-xl ${pageLocation.pathname === '/' ? 'text-[#9538E2]' : 'md:text-[#0B0B0B]'}`}></i>
-                                            <div className={`w-[16px] h-[16px] bg-white rounded-full border absolute top-[-5px] right-[-3px] flex items-center justify-center ${pageLocation.pathname === '/' ? 'md:border-[#9538E8]' : 'md:border-[#0B0B0B1A]'}`}>
-                                                <span className={`font-sora text-[10px] ${pageLocation.pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>0</span>
-                                            </div>
+        <div className={`w-full ${pathname === '/' && 'px-4 md:pt-[30px]'}`}>
+            <div className={`w-full ${pathname === '/' && 'pl-[6px] pr-[6px] border-l border-r border-[#e2e2e2] md:border-t md:pt-[6px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl'} `}>
+                <div className={`w-full py-[30px] ${pathname === '/' ? 'bg-[#9538E2] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl' : 'bg-none'} relative`}>
+                    <div className='container mx-auto px-4'>
+                        <div className={`w-full flex items-center justify-between`}>
+                            <div className={`w-auto`}>
+                                <h1 className={`font-sora text-xl leading-[26px] font-bold ${pathname === '/' ? 'text-[#FFFFFF]' : 'text-[#0B0B0B]'} cursor-pointer`}>Gadget Heaven</h1>
+                            </div>
+                            <div className={`w-auto hidden md:block`}>
+                                <nav className={`w-auto`}>
+                                    <ul className={`w-auto flex items-center justify-center gap-x-5 md:gap-x-[35px] lg:gap-x-[48px]`}>
+                                        <NavLink to='/' className={`font-sora text-base leading-5 ${pathname === '/' ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
+                                        <NavLink to='/statistics' className={`font-sora text-base leading-5 ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : (pathname === '/' ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Statistics</NavLink>
+                                        <NavLink to='/dashboard' className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : (pathname === '/' ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div className={`w-auto flex items-center justify-center gap-x-3`}>
+                                <div className={`w-auto flex items-center justify-center gap-x-3 md:gap-x-4`}>
+                                    <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
+                                        <i className={`ri-shopping-cart-line text-lg ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
+                                        <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${pathname === '/' ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
+                                            <span className={`font-sora text-[10px] font-medium ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
                                         </div>
                                     </div>
-                                    <div className='w-auto md:hidden'>
-                                        <div onClick={handleNav} className='w-[25px] h-[25px] flex items-center justify-end cursor-pointer'>
-                                            <i className={`ri-menu-line text-2xl ${pageLocation.pathname === '/' ? 'text-white' : 'text-[#0B0B0B]'}`}></i>
+                                    <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
+                                        <i className={`ri-heart-line text-lg ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
+                                        <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${pathname === '/' ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
+                                            <span className={`font-sora text-[10px] font-medium ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
                                         </div>
                                     </div>
+                                </div>
+                                <div className={`w-auto md:hidden`} onClick={handleNavActive}>
+                                    <i className={`ri-menu-fill text-2xl ${pathname === '/' ? 'text-white' : 'text-[#0B0B0B]'} cursor-pointer`}></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className={`z-10 fixed ${isNavActive ? 'top-0 duration-300 ease-in-out' : 'top-[-100%] duration-300 ease-in-out'} left-0 w-full h-[500px] bg-white/70 backdrop-blur-md shadow-sm transition-all md:hidden`}>
-                <div onClick={handleNav} className='w-[25px] h-[25px] bg-[#9538E2] flex items-center justify-center absolute top-[24px] right-[25px] cursor-pointer'>
-                    <i className="ri-close-fill text-2xl text-white"></i>
-                </div>
-                <div className='w-full'>
-                    <nav className='mt-[85px]'>
-                        <ul className='flex flex-col'>
-                            <NavLink to='/' className={`pl-[25px] py-5 border-b border-[#dbdbdb] text-base font-sora font-medium ${pageLocation.pathname === '/' ? 'text-[#9538E2]' : 'text-[#a1a1a1]'}`}>Home</NavLink>
-                            <NavLink to='/statistics' className={`pl-[25px] py-5 border-b border-[#dbdbdb] text-base font-sora font-medium ${pageLocation.pathname === '/statistics' ? 'text-[#9538E2]' : 'text-[#a1a1a1]'}`}>Statistics</NavLink>
-                            <NavLink to='/dashboard' className={`pl-[25px] py-5 border-b border-[#dbdbdb] text-base font-sora font-medium ${pageLocation.pathname === '/dashboard' ? 'text-[#9538E2]' : 'text-[#a1a1a1]'}`}>Dashboard</NavLink>
-                        </ul>
-                    </nav>
-                    <div className='w-full flex items-center justify-center gap-x-3 mt-[70px]'>
-                        <div className='relative w-[40px] h-[40px] bg-[#9538E2] border border-[#dbdbdbb] rounded-full flex items-center justify-center cursor-pointer md:bg-[#ffffff] md:border-[#0B0B0B1A]'>
-                            <i className="ri-shopping-cart-line text-xl text-white md:text-[#9538E2]"></i>
-                            <div className='w-[16px] h-[16px] bg-white rounded-full border absolute top-[-5px] right-[-3px] flex items-center justify-center md:border-[#9538E8]'>
-                                <span className='font-sora text-[10px] text-[#9538E2]'>0</span>
-                            </div>
+                    <div className={`fixed z-10 top-0 ${isNavActive ? 'right-0 duration-300 ease-in' : 'right-[-100%] duration-300 ease-out'} w-full h-screen bg-white/80 backdrop-blur-xl md:hidden`}>
+                        <div className={`w-[30px] h-[30px] bg-[#9538E2] flex items-center justify-center mt-7 ml-7 cursor-pointer`} onClick={handleNavActive}>
+                            <i className={`ri-close-large-fill text-xl text-white`}></i>
                         </div>
-                        <div className='relative w-[40px] h-[40px] bg-[#9538E2] border border-[#dbdbdbb] rounded-full flex items-center justify-center cursor-pointer md:bg-white md:border-[#0B0B0B1A]'>
-                            <i className="ri-heart-line text-xl text-white md:text-[#9538E2]"></i>
-                            <div className='w-[16px] h-[16px] bg-white rounded-full border absolute top-[-5px] right-[-3px] flex items-center justify-center md:border-[#9538E8]'>
-                                <span className='font-sora text-[10px] text-[#9538E2]'>0</span>
-                            </div>
+                        <div className={`w-full mt-[60px]`}>
+                            <nav className={`w-full`}>
+                                <ul className={`w-full flex justify-center flex-col`}>
+                                    <NavLink to='/' className={`font-sora text-base leading-[26px] ${pathname === '/' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Home</NavLink>
+                                    <NavLink to='/statistics' className={`font-sora text-base leading-[26px] ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Statistics</NavLink>
+                                    <NavLink to='/dashboard' className={`font-sora text-base leading-[26px] ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Dashboard</NavLink>
+                                    <NavLink to='/cart list' className={`font-sora text-base leading-[26px] ${pathname === '/cart list' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Cart List</NavLink>
+                                    <NavLink to='/wish list' className={`font-sora text-base leading-[26px] ${pathname === '/wish list' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Wishlist</NavLink>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div className={`w-full absolute left-0 bottom-[20px]`}>
+                            <p className={`font-sora text-sm text-center text-black/30 flex items-center justify-center gap-x-[7px]`}>
+                                <i className="ri-copyright-line"></i>
+                                <span>Copyright 2024 - {new Date().getFullYear()} All right reserved</span>
+                            </p>
                         </div>
                     </div>
                 </div>
