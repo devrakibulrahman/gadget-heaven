@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 const ProductItems = ({product}) => {
     // product object destructure ----------------------------->
     const {product_id, product_title, product_image, price} = product;
+
+    
     return (
         <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-full md:p-6 xl:min-h-[453px]`}>
             <div className={`w-full h-[240px] bg-[#D9D9D9] rounded-xl overflow-hidden xl:h-[200px] 2xl:h-[240px]`}>
