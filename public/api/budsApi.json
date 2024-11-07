@@ -1,0 +1,37 @@
+[
+    {
+      "product_id": "301",
+      "product_title": "AirPods 4",
+      "product_image": "https://example.com/images/airpods_4.jpg",
+      "category": "Wireless Earbuds",
+      "price": 249.99,
+      "description": "The AirPods 4 offer an immersive sound experience with enhanced noise cancellation and a longer battery life, designed for seamless integration with Apple devices.",
+      "Specification": [
+        "Active Noise Cancellation",
+        "Spatial audio with dynamic head tracking",
+        "Up to 30 hours total battery life with charging case",
+        "Bluetooth 5.3",
+        "IPX4 sweat and water resistance"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "302",
+      "product_title": "Galaxy Buds 3 Pro",
+      "product_image": "https://example.com/images/galaxy_buds_3_pro.jpg",
+      "category": "Wireless Earbuds",
+      "price": 229.99,
+      "description": "Galaxy Buds 3 Pro are premium earbuds from Samsung with excellent sound quality, adaptive ANC, and a comfortable fit.",
+      "Specification": [
+        "Adaptive Active Noise Cancellation",
+        "Hi-Fi sound quality with 24-bit audio support",
+        "Up to 29 hours total battery life with charging case",
+        "Bluetooth 5.3",
+        "IPX7 water resistance"
+      ],
+      "availability": true,
+      "rating": 4.6
+    }
+  ]
+  
