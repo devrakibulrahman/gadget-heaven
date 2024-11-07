@@ -5,13 +5,14 @@ import ProductItems from "../components/ProductItems";
 
 const Home = () => {
     // all state declare here ------------------------------>
-    const [allProducts, setAllProducts] = useState();
+    const [allProducts, setAllProducts] = useState([]);
 
     // data fetch here ------------------------------------->
     useEffect( () => {
         fetch('allProductApi.json')
             .then((res) => res.json())
-            .then((data) => console.log(data))
+            .then((data) => setAllProducts(data))
+            .catch((err) => console.log(err))
     },[]);
 
     return (
@@ -62,15 +63,9 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className={`w-full grid-bx`}>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
-                                    <ProductItems></ProductItems>
+                                    {
+                                        allProducts.map((products) => <ProductItems key={products.product_id} product={products}/>)
+                                    }
                                 </div>
                             </div>
                         </div>

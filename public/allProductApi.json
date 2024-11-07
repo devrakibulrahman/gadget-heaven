@@ -1,223 +1,164 @@
 [
   {
     "product_id": "101",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://i.ibb.co.com/HxzNxss/Samsung-Galaxy-S24-Ultra.jpg",
+    "category": "Smartphones",
+    "price": 1199.99,
+    "description": "Flagship smartphone with an advanced camera system and S Pen functionality.",
+    "Specification": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 2 processor",
+      "12 GB RAM",
+      "256 GB storage",
+      "200 MP quad-camera system"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "102",
+    "product_title": "Apple Watch Ultra 2",
+    "product_image": "https://i.ibb.co.com/pfxpmf3/Apple-Watch-Ultra2.jpg",
+    "category": "Smartwatches",
+    "price": 799.99,
+    "description": "Rugged and advanced smartwatch for adventurers and athletes.",
+    "Specification": [
+      "49mm titanium case",
+      "Dual-frequency GPS",
+      "Up to 36 hours battery life",
+      "Always-On Retina display"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "103",
+    "product_title": "Sony Alpha 1 (A1)",
+    "product_image": "https://i.ibb.co.com/M2Q9tfY/Sony-Alpha1-a1.jpg",
+    "category": "Cameras",
+    "price": 6499.99,
+    "description": "Flagship full-frame mirrorless camera with exceptional speed and resolution.",
+    "Specification": [
+      "50.1 MP full-frame Exmor RS CMOS sensor",
+      "8K video recording",
+      "30 fps continuous shooting",
+      "5-axis image stabilization"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "104",
+    "product_title": "AirPods 4",
+    "product_image": "https://i.ibb.co.com/xJvcKRd/AirPods4.jpg",
+    "category": "Wireless Earbuds",
+    "price": 249.99,
+    "description": "High-quality wireless earbuds with active noise cancellation and spatial audio.",
+    "Specification": [
+      "ANC and transparency mode",
+      "Spatial audio",
+      "IPX4 water resistance",
+      "Up to 30 hours battery with charging case"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "105",
     "product_title": "Surface Laptop Studio 2",
-    "product_image": "https://example.com/images/surface_laptop_studio_2.jpg",
+    "product_image": "https://i.ibb.co.com/W0mJXN4/Surface-Laptop-Studio2.png",
     "category": "Laptops",
     "price": 2499.99,
-    "description": "The Surface Laptop Studio 2 is a versatile device offering a seamless transition between laptop, stage, and studio modes, with high performance for professional tasks.",
+    "description": "Versatile laptop with 3-in-1 functionality, perfect for professionals.",
     "Specification": [
-      "14.4-inch PixelSense touchscreen display",
-      "Intel Core i7 13th Gen processor",
+      "14.4-inch touchscreen display",
+      "Intel Core i7 processor",
       "32 GB RAM",
-      "1 TB SSD",
       "NVIDIA GeForce RTX 4060 GPU"
     ],
     "availability": true,
     "rating": 4.7
   },
   {
-    "product_id": "102",
-    "product_title": "Surface Laptop Go 3",
-    "product_image": "https://example.com/images/surface_laptop_go_3.jpg",
-    "category": "Laptops",
-    "price": 799.99,
-    "description": "Surface Laptop Go 3 is a lightweight and portable laptop designed for everyday tasks with a responsive touch display.",
+    "product_id": "106",
+    "product_title": "Google Pixel 9 Pro XL",
+    "product_image": "https://i.ibb.co.com/310tH6m/Google-Pixel9-Pro-XL.jpg",
+    "category": "Smartphones",
+    "price": 1099.99,
+    "description": "High-end smartphone with advanced AI capabilities and exceptional camera performance.",
     "Specification": [
-      "12.4-inch PixelSense touchscreen display",
-      "Intel Core i5 12th Gen processor",
-      "8 GB RAM",
-      "256 GB SSD",
-      "Integrated Intel Iris Xe graphics"
+      "6.7-inch OLED display",
+      "Google Tensor G3 chip",
+      "12 GB RAM",
+      "512 GB storage",
+      "50 MP dual-camera system"
     ],
     "availability": true,
-    "rating": 4.3
+    "rating": 4.6
   },
   {
-    "product_id": "103",
-    "product_title": "Microsoft Surface Laptop 7th Edition",
-    "product_image": "https://example.com/images/surface_laptop_7.jpg",
-    "category": "Laptops",
-    "price": 1399.99,
-    "description": "The 7th Edition of the Microsoft Surface Laptop offers powerful performance and a sleek design ideal for work and play.",
+    "product_id": "107",
+    "product_title": "Samsung Galaxy Buds 3 Pro",
+    "product_image": "https://i.ibb.co.com/FY7KrMt/Galaxy-Buds3-Pro.jpg",
+    "category": "Wireless Earbuds",
+    "price": 229.99,
+    "description": "Premium wireless earbuds with adaptive noise cancellation and high-quality sound.",
     "Specification": [
-      "13.5-inch PixelSense display",
-      "Intel Core i7 11th Gen processor",
-      "16 GB RAM",
-      "512 GB SSD",
-      "Integrated Intel Iris Plus graphics"
+      "ANC",
+      "Hi-Fi audio support",
+      "IPX7 water resistance",
+      "Bluetooth 5.3"
     ],
     "availability": true,
-    "rating": 4.5
+    "rating": 4.6
   },
   {
-    "product_id": "104",
+    "product_id": "108",
+    "product_title": "Nikon Z9",
+    "product_image": "https://i.ibb.co.com/V9SjcLt/NikonZ9.jpg",
+    "category": "Cameras",
+    "price": 5499.99,
+    "description": "Top-tier full-frame mirrorless camera ideal for professional photography and videography.",
+    "Specification": [
+      "45.7 MP CMOS sensor",
+      "8K video recording",
+      "20 fps continuous shooting",
+      "Dual CFexpress card slots"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "109",
     "product_title": "MacBook Pro M3",
-    "product_image": "https://example.com/images/macbook_pro_m3.jpg",
+    "product_image": "https://i.ibb.co.com/dthnc5D/Mac-Book-Pro-M3-Chip.jpg",
     "category": "Laptops",
     "price": 2999.99,
-    "description": "The MacBook Pro M3 is equipped with the latest Apple Silicon chip for unrivaled performance and power efficiency, perfect for intensive professional use.",
+    "description": "Professional laptop powered by the new M3 chip, designed for high performance.",
     "Specification": [
       "16-inch Liquid Retina XDR display",
       "Apple M3 chip",
       "32 GB unified memory",
-      "1 TB SSD",
-      "16-core GPU"
+      "1 TB SSD storage"
     ],
     "availability": true,
     "rating": 4.9
   },
   {
-    "product_id": "105",
-    "product_title": "MacBook Air",
-    "product_image": "https://example.com/images/macbook_air.jpg",
-    "category": "Laptops",
-    "price": 1099.99,
-    "description": "The MacBook Air is known for its thin and lightweight design, featuring Apple's M-series chip for smooth multitasking and efficiency.",
-    "Specification": [
-      "13.6-inch Liquid Retina display",
-      "Apple M2 chip",
-      "16 GB unified memory",
-      "512 GB SSD",
-      "10-core GPU"
-    ],
-    "availability": true,
-    "rating": 4.6
-  },
-  {
-    "product_id": "106",
-    "product_title": "MacBook Pro",
-    "product_image": "https://example.com/images/macbook_pro.jpg",
-    "category": "Laptops",
-    "price": 1999.99,
-    "description": "The MacBook Pro offers powerful performance with the M-series chip, excellent display quality, and advanced audio features.",
-    "Specification": [
-      "14-inch Liquid Retina XDR display",
-      "Apple M2 Pro chip",
-      "16 GB unified memory",
-      "512 GB SSD",
-      "12-core GPU"
-    ],
-    "availability": true,
-    "rating": 4.8
-  },
-  {
-    "product_id": "201",
-    "product_title": "Sony Alpha 1 (A1)",
-    "product_image": "https://example.com/images/sony_alpha_a1.jpg",
-    "category": "Cameras",
-    "price": 6499.99,
-    "description": "The Sony Alpha 1 (A1) is a flagship full-frame mirrorless camera offering exceptional speed, high resolution, and professional-level video capabilities.",
-    "Specification": [
-      "50.1 MP full-frame stacked Exmor RS CMOS sensor",
-      "8K 30p and 4K 120p video recording",
-      "30 fps continuous shooting",
-      "759-point phase-detection AF system",
-      "5-axis in-body image stabilization"
-    ],
-    "availability": true,
-    "rating": 4.9
-  },
-  {
-    "product_id": "202",
-    "product_title": "Sony A7R V",
-    "product_image": "https://example.com/images/sony_a7r_v.jpg",
-    "category": "Cameras",
-    "price": 3899.99,
-    "description": "The Sony A7R V is known for its high-resolution imaging, advanced autofocus system, and superb dynamic range, perfect for detailed photography.",
-    "Specification": [
-      "61 MP full-frame back-illuminated Exmor R CMOS sensor",
-      "4K 60p video recording",
-      "Next-gen AI-based autofocus",
-      "10 fps continuous shooting",
-      "5.5-stop in-body image stabilization"
-    ],
-    "availability": true,
-    "rating": 4.8
-  },
-  {
-    "product_id": "203",
-    "product_title": "Nikon Z9",
-    "product_image": "https://example.com/images/nikon_z9.jpg",
-    "category": "Cameras",
-    "price": 5499.99,
-    "description": "The Nikon Z9 is a professional full-frame mirrorless camera with groundbreaking features, designed for both photography and video professionals.",
-    "Specification": [
-      "45.7 MP full-frame stacked CMOS sensor",
-      "8K 30p and 4K 120p video recording",
-      "20 fps RAW continuous shooting",
-      "493-point phase-detection AF system",
-      "Dual CFexpress Type B card slots"
-    ],
-    "availability": true,
-    "rating": 4.9
-  },
-  {
-    "product_id": "301",
-    "product_title": "AirPods 4",
-    "product_image": "https://example.com/images/airpods_4.jpg",
-    "category": "Wireless Earbuds",
-    "price": 249.99,
-    "description": "The AirPods 4 offer an immersive sound experience with enhanced noise cancellation and a longer battery life, designed for seamless integration with Apple devices.",
-    "Specification": [
-      "Active Noise Cancellation",
-      "Spatial audio with dynamic head tracking",
-      "Up to 30 hours total battery life with charging case",
-      "Bluetooth 5.3",
-      "IPX4 sweat and water resistance"
-    ],
-    "availability": true,
-    "rating": 4.7
-  },
-  {
-    "product_id": "302",
-    "product_title": "Galaxy Buds 3 Pro",
-    "product_image": "https://example.com/images/galaxy_buds_3_pro.jpg",
-    "category": "Wireless Earbuds",
-    "price": 229.99,
-    "description": "Galaxy Buds 3 Pro are premium earbuds from Samsung with excellent sound quality, adaptive ANC, and a comfortable fit.",
-    "Specification": [
-      "Adaptive Active Noise Cancellation",
-      "Hi-Fi sound quality with 24-bit audio support",
-      "Up to 29 hours total battery life with charging case",
-      "Bluetooth 5.3",
-      "IPX7 water resistance"
-    ],
-    "availability": true,
-    "rating": 4.6
-  },
-  {
-    "product_id": "401",
+    "product_id": "110",
     "product_title": "Apple Watch SE 2",
-    "product_image": "https://example.com/images/apple_watch_se2.jpg",
+    "product_image": "https://i.ibb.co.com/g624tzM/Apple-Watch-SE2.jpg",
     "category": "Smartwatches",
     "price": 249.99,
-    "description": "The Apple Watch SE 2 combines essential features for a great smartwatch experience with advanced health and fitness tracking.",
+    "description": "Affordable smartwatch with core features for fitness and health tracking.",
     "Specification": [
       "Retina display",
-      "Up to 18 hours of battery life",
-      "Heart rate and sleep monitoring",
-      "Water resistant up to 50 meters",
-      "S8 chip for performance"
+      "Heart rate and sleep tracking",
+      "Up to 18 hours battery life",
+      "Water resistant up to 50 meters"
     ],
     "availability": true,
     "rating": 4.5
-  },
-  {
-    "product_id": "402",
-    "product_title": "Apple Watch Ultra 2",
-    "product_image": "https://example.com/images/apple_watch_ultra_2.jpg",
-    "category": "Smartwatches",
-    "price": 799.99,
-    "description": "The Apple Watch Ultra 2 is designed for adventurers and athletes, offering rugged design and advanced performance features.",
-    "Specification": [
-      "49mm titanium case",
-      "Dual-frequency GPS",
-      "Up to 36 hours of battery life",
-      "Dive computer functionality",
-      "Always-On Retina display"
-    ],
-    "availability": true,
-    "rating": 4.8
   }
 ]
