@@ -1,0 +1,88 @@
+[
+    {
+      "product_id": "401",
+      "product_title": "Apple Watch SE 2",
+      "product_image": "https://example.com/images/apple_watch_se2.jpg",
+      "category": "Smartwatches",
+      "price": 249.99,
+      "description": "The Apple Watch SE 2 combines essential features for a great smartwatch experience with advanced health and fitness tracking.",
+      "Specification": [
+        "Retina display",
+        "Up to 18 hours of battery life",
+        "Heart rate and sleep monitoring",
+        "Water resistant up to 50 meters",
+        "S8 chip for performance"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "402",
+      "product_title": "Apple Watch Ultra 2",
+      "product_image": "https://example.com/images/apple_watch_ultra_2.jpg",
+      "category": "Smartwatches",
+      "price": 799.99,
+      "description": "The Apple Watch Ultra 2 is designed for adventurers and athletes, offering rugged design and advanced performance features.",
+      "Specification": [
+        "49mm titanium case",
+        "Dual-frequency GPS",
+        "Up to 36 hours of battery life",
+        "Dive computer functionality",
+        "Always-On Retina display"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "403",
+      "product_title": "Apple Watch Series 10",
+      "product_image": "https://example.com/images/apple_watch_series_10.jpg",
+      "category": "Smartwatches",
+      "price": 499.99,
+      "description": "The Apple Watch Series 10 comes with cutting-edge health monitoring features, an improved processor, and a sleek design.",
+      "Specification": [
+        "Always-On Retina display",
+        "S10 chip for enhanced speed",
+        "Up to 20 hours of battery life",
+        "Advanced health sensors (ECG, blood oxygen)",
+        "Water resistant up to 50 meters"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "404",
+      "product_title": "Samsung Galaxy Watch 6 Classic",
+      "product_image": "https://example.com/images/galaxy_watch_6_classic.jpg",
+      "category": "Smartwatches",
+      "price": 399.99,
+      "description": "The Samsung Galaxy Watch 6 Classic offers a premium design, powerful health features, and smooth integration with the Samsung ecosystem.",
+      "Specification": [
+        "Rotating bezel",
+        "1.5-inch Super AMOLED display",
+        "Up to 40 hours of battery life",
+        "Heart rate and ECG monitoring",
+        "Water resistant up to 50 meters"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "405",
+      "product_title": "OnePlus Watch SE",
+      "product_image": "https://example.com/images/oneplus_watch_se.jpg",
+      "category": "Smartwatches",
+      "price": 179.99,
+      "description": "The OnePlus Watch SE provides great value with essential health tracking, long battery life, and a sleek design.",
+      "Specification": [
+        "1.39-inch AMOLED display",
+        "Up to 14 days of battery life",
+        "SpO2 and heart rate monitoring",
+        "Water resistant up to 50 meters",
+        "GPS built-in"
+      ],
+      "availability": true,
+      "rating": 4.4
+    }
+  ]
+  

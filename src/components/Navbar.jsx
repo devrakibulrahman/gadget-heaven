@@ -55,7 +55,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={`fixed z-10 top-0 ${isNavActive ? 'right-0 duration-300 ease-in' : 'right-[-100%] duration-300 ease-out'} w-full h-screen bg-white/80 backdrop-blur-xl md:hidden`}>
+                    <div className={`fixed z-20 top-0 ${isNavActive ? 'right-0 duration-300 ease-in' : 'right-[-100%] duration-300 ease-out'} w-full h-screen bg-white/80 backdrop-blur-xl md:hidden`}>
                         <div className={`w-[30px] h-[30px] bg-[#9538E2] flex items-center justify-center mt-7 ml-7 cursor-pointer`} onClick={handleNavActive}>
                             <i className={`ri-close-large-fill text-xl text-white`}></i>
                         </div>
