@@ -1,8 +1,19 @@
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import '../css/style.css';
 import ProductItems from "../components/ProductItems";
 
 const Home = () => {
+    // all state declare here ------------------------------>
+    const [allProducts, setAllProducts] = useState();
+
+    // data fetch here ------------------------------------->
+    useEffect( () => {
+        fetch('allProductApi.json')
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+    },[]);
+
     return (
         <div className={`w-full`}>
             <div className={`w-full px-4`}>
@@ -22,7 +33,7 @@ const Home = () => {
                             </div>
                             <div className={`w-full relative min-h-[200px] flex items-center justify-center xl:min-h-[200px]`}>
                                 <div className={`w-full xl:absolute xl:top-0 xl:left-0`}>
-                                    <div className={`w-full max-w-[1110px] mx-auto xl:p-5 xl:border-2 xl:backdrop-blur-md  xl:bg-gradient-to-b xl:from-[#ffffff5b] xl:to-[#ffffff] xl:border-[#fafafa] xl:rounded-3xl`}>
+                                    <div className={`w-full max-w-[1110px] mx-auto xl:p-5 xl:border-2 xl:backdrop-blur-md  xl:bg-gradient-to-b xl:from-[#ffffff5b] xl:to-[#ffffff00] xl:border-[#f1f1f1] xl:rounded-3xl`}>
                                         <div className={`w-full h-[260px] bg-white bg-banner bg-center bg-cover bg-no-repeat rounded-xl sm:h-[350px] md:h-[400px] lg:h-[480px] md:rounded-2xl lg:rounded-3xl xl:rounded-3xl xl:h-[540px]`}></div>
                                     </div>
                                 </div>
