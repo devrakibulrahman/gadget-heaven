@@ -4,7 +4,7 @@ const ProductDetails = () => {
 
     return (
         <div className={`w-full`}>
-            <div className={`w-full min-h-[109vh] sm:min-h-[110vh] md:min-h-[140vh] lg:min-h-[90vh]`}>
+            <div className={`w-full mb-[545px] sm:mb-[555px] md:mb-[850px] lg:mb-[400px]`}>
                 <div className={`relative w-full min-h-[465px] bg-[#9538E2]`}>
                     <div className={`container mx-auto px-4`}>
                         <div className={`w-full relative`}>
