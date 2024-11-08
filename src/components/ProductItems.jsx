@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ProductItems = ({product}) => {
     // product object destructure ----------------------------->
     const {product_id, product_title, product_image, price} = product;
+    console.log(product_id)
     
     // state and hooks declare here --------------------------->
     const pageNavigate = useNavigate();
