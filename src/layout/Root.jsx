@@ -5,7 +5,7 @@ import Footer from '../components/Footer.jsx';
 const Root = () => {
     const routeLocation = useLocation();
     return (
-        <div className="w-full min-h-screen bg-[#F7F7F7]">
+        <div className="w-full min-h-screen bg-[#F7F7F7] flex items-center justify-center flex-col">
             <Navbar></Navbar>
             <div className={`w-full min-h-[calc(1080px_-_678px)] ${routeLocation.pathname === '/' || 'min-h-[calc(1080px_-_642px)]'}`}>
                 <Outlet />

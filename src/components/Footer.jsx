@@ -3,7 +3,7 @@ import 'remixicon/fonts/remixicon.css';
 
 const Footer = () => {
     return (
-        <div className={`w-full min-h-[20vh] bg-white`}>
+        <div className={`w-full min-h-[20vh] bg-white mt-auto`}>
             <div className={`container mx-auto px-4`}>
                 <div className={`w-full flex items-center justify-center flex-col pt-[50px]`}>
                     <div className={`w-full flex flex-col items-center justify-center`}>
