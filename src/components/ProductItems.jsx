@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import '../css/style.css';
 
 const ProductItems = ({product}) => {
     // product object destructure ----------------------------->
     const {product_title, product_image, price} = product;
     
     // state and hooks declare here --------------------------->
-    const pageNavigate = useNavigate();
+    // const pageNavigate = useNavigate();
 
     // event handle declare here ------------------------------>
-    const handlePageNavigate = () => {
-        pageNavigate(`/product details`);
-    };
+    // const handlePageNavigate = () => {
+    //     pageNavigate(`/product details`);
+    // };
 
     return (
         <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-full md:p-6 xl:min-h-[453px] flex flex-col`}>
@@ -25,12 +26,10 @@ const ProductItems = ({product}) => {
                 </div>
             </div>
             <div className={`w-full mt-4`}>
-                <button onClick={handlePageNavigate} className={`font-sora text-base leading-[26px] font-semibold text-[#9538E2] bg-[#8d03ff] w-[150px] h-[48px] rounded-full overflow-hidden relative md:text-lg md:w-[160px] md:h-[55px]`}>
-                    <div className={`w-[142.5px] h-[42px] translate-x-[2.5%] translate-y-[-49.10%] absolute flex items-center justify-center md:translate-x-[2.2%] md:translate-y-[-51%] bg-white rounded-full z-10 md:w-[153px] md:h-[50px] overflow-hidden transition duration-200 ease-in-out hover:bg-[#8d03ff] group`}>
-                        <span className={`absolute top-[20%] left-[12%] z-20 group-hover:text-white`}>View Details</span>
-                        <div className={`w-[100px] h-[100px] absolute rounded-full group-hover:bg-[#f53eff] blur-xl bottom-[-155%] left-[15%]`}></div>
+                <button className={`radial-btn w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[165px] lg:h-[52px]`}>
+                    <div className={`btn-bg flex items-center justify-center gap-x-2 bg-white w-full h-full rounded-full btn-bg-transition`}>
+                        <span  className={`font-sora text-sm leading-[26px] font-semibold md:text-base lg:text-lg`}>View Details</span>
                     </div>
-                    <div className={`w-[100px] h-[100px] absolute bottom-[-155%] left-[15%] rounded-full blur-xl bg-[#f53eff]`}></div>
                 </button>
             </div>
         </div>

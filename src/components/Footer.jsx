@@ -33,7 +33,7 @@ const Footer = () => {
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>About Us</Link>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>America Branch</Link>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Korea Branch</Link>
-                                        <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Bangladesh Branch</Link>
+                                        <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>China Branch</Link>
                                     </ul>
                                 </nav>
                             </div>

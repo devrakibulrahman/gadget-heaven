@@ -4,3 +4,22 @@
     place-items: center;
     gap: 24px;
 }
+
+.radial-btn{
+    background: radial-gradient(circle 80px at 50% 170%, #d15fee, #d15fee, #8a2be2);
+}
+
+.btn-bg{
+    background: white;
+    color: #8a2be2;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-bg-transition:hover{
+    color: white;
+    background: radial-gradient(circle 80px at 50% 170%, #d15fee, #d15fee, #8a2be2);
+}
+
+.btn-bg-primary{
+    background: radial-gradient(circle 80px at 50% 170%, #d15fee, #d15fee, #8a2be2);
+}
