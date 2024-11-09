@@ -36,7 +36,7 @@ const Dashboard = () => {
                     </div>
                     <div className={`w-full flex items-center justify-center gap-x-3 mt-4 md:gap-x-4 md:mt-6 lg:gap-x-5 lg:mt-7 xl:gap-x-6 xl:mt-8`}>
                         <div className={`w-auto`}>
-                            <button onClick={() => handleCartTab('cart')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${cartTabActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[155px] lg:h-[52px] xl:w-[160px] xl:h-[52px]`}>Cart</button>
+                            <button onClick={() => handleCartTab('cart')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${cartTabActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} transition duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-[#9538E2] md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[155px] lg:h-[52px] xl:w-[160px] xl:h-[52px]`}>Cart</button>
                         </div>
                         <div className={`w-auto`}>
                             <button onClick={() => handleCartTab('wishlist')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${wishListActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} transition duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-[#9538E2] md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[160px] lg:h-[52px] xl:w-[180px] xl:h-[52px]`}>Wishlist</button>
