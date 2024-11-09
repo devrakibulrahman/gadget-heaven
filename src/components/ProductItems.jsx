@@ -4,14 +4,14 @@ import '../css/style.css';
 
 const ProductItems = ({product}) => {
     // product object destructure ----------------------------->
-    const {product_title, product_image, price} = product;
+    const {product_id, product_title, product_image, price} = product;
     
     // state and hooks declare here --------------------------->
     const pageNavigate = useNavigate();
 
     // event handle declare here ------------------------------>
-    const handlePageNavigate = () => {
-        pageNavigate(`/product details`);
+    const handlePageNavigate = (productId) => {
+        pageNavigate(`/product details/${productId}`);
     };
 
     return (
@@ -26,7 +26,7 @@ const ProductItems = ({product}) => {
                 </div>
             </div>
             <div className={`w-full mt-4`}>
-                <button onClick={handlePageNavigate} className={`radial-btn w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[165px] lg:h-[52px]`}>
+                <button onClick={() => handlePageNavigate(product_id)} className={`radial-btn w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[165px] lg:h-[52px]`}>
                     <div className={`btn-bg flex items-center justify-center gap-x-2 bg-white w-full h-full rounded-full btn-bg-transition`}>
                         <span  className={`font-sora text-sm leading-[26px] font-semibold md:text-base lg:text-lg`}>View Details</span>
                     </div>

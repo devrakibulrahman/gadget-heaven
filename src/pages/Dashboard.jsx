@@ -13,14 +13,12 @@ const Dashboard = () => {
     // tab button event handle --------------------->
     const handleCartTab = (str) => {
         if(str === 'cart'){
-            console.log('cart');
             setCartTabActive(true);
             setWishListActive(false);
             return;
         };
 
         if(str === 'wishlist'){
-            console.log('wishlist');
             setCartTabActive(false);
             setWishListActive(true);
             return;
