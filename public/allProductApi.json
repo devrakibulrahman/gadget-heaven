@@ -124,7 +124,7 @@
     "product_image": "https://i.ibb.co.com/cymTB3c/iphone15.jpg",
     "category": "Smartphones",
     "price": 899.99,
-    "description": "iPhone 15 brings new features such as Dynamic Island and improved battery life with an upgraded camera.",
+    "description": "The iPhone 15 features a sleek design, advanced camera system, and Apple's A16 Bionic chip for superior performance. It introduces USB-C connectivity and improved battery life for a better user experience.",
     "Specification": [
       "6.1-inch Super Retina XDR display",
       "4000mAh battery",
@@ -202,23 +202,6 @@
     ],
     "availability": true,
     "rating": 4.6
-  },
-  {
-    "product_id": "405",
-    "product_title": "OnePlus Watch SE",
-    "product_image": "https://i.ibb.co.com/hZPQ84w/One-Plus-Watch-SE.jpg",
-    "category": "Smartwatches",
-    "price": 179.99,
-    "description": "The OnePlus Watch SE provides great value with essential health tracking, long battery life, and a sleek design.",
-    "Specification": [
-      "1.39-inch AMOLED display",
-      "Up to 14 days of battery life",
-      "SpO2 and heart rate monitoring",
-      "Water resistant up to 50 meters",
-      "GPS built-in"
-    ],
-    "availability": true,
-    "rating": 4.4
   },
   {
     "product_id": "101",

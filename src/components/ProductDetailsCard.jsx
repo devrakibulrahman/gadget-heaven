@@ -19,7 +19,7 @@ const ProductDetailsCard = ({idFromURL}) => {
         <div className={`w-full min-h-[565px] bg-white p-4 rounded-xl md:p-5 lg:p-6 xl:p-7 2xl:p-8 md:rounded-2xl lg:rounded-3xl`}>
             <div className={`w-full flex justify-center flex-col gap-y-5 lg:flex-row lg:gap-x-8`}>
                 <div className={`w-auto min-h-[100px]`}>
-                    <div className={`w-full h-[280px] bg-[#ECECEC] rounded-2xl overflow-hidden sm:h-[320px] md:h-[503px] lg:w-[400px] lg:h-full`}>
+                    <div className={`w-full h-[280px] bg-[#ECECEC] rounded-2xl overflow-hidden sm:h-[320px] md:h-[503px] lg:w-[400px] lg:h-full xl:w-[550px]`}>
                         <img src={product_image} alt="product image" className='object-cover w-full h-full'/>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ const ProductDetailsCard = ({idFromURL}) => {
                     <div className={`w-full flex justify-between md:flex-col md:gap-y-4`}>
                         <div className={`w-auto`}>
                             <h1 className={`font-sora text-lg leading-5 font-semibold text-[#09080F] md:text-xl md:leading-[25px] lg:text-2xl lg:leading-[30px] xl:text-[28px] xl:leading-[35px]`}>{product_title}</h1>
-                            <p className={`font-sora text-base leading-[30px] font-medium text-[#09080FCC] mt-2 md:mt-3 md:text-lg lg:text-xl`}>{price}</p>
+                            <p className={`font-sora text-base leading-[30px] font-medium text-[#09080FCC] mt-2 md:mt-3 md:text-lg lg:text-xl`}>Price: ${price}</p>
                         </div>
                         <div className={`h-8 flex items-center justify-center border ${availability ? 'border-[#309C08] bg-[#309C081A] w-[87px] ' : 'border-[#ff1515] bg-[#9c08081a] w-[120px]'} rounded-full`}>
                             <p className={`font-sora text-sm leading-[18px] font-medium ${availability ? 'text-[#309C08]' : 'text-[#ff1515]'}`}>{availability ? 'In Stock' : 'Out of Stock'}</p>
