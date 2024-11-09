@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import '../css/style.css';
 import ProductItems from "../components/ProductItems";
@@ -46,13 +45,13 @@ const Home = () => {
                             <div className={`w-full mt-[48px] mb-[50px] flex items-center justify-center flex-col gap-x-6 gap-y-6 sm:items-start sm:justify-start sm:flex-row md:mb-[80px] lg:mb-[100px]`}>
                                 <div className={`w-full max-w-[400px] sm:max-w-[200px] md:max-w-[240px]`}>
                                     <div className={`w-auto bg-white border border-[#09080F1A] rounded-lg p-3 grid grid-cols-2 gap-2 md:p-4 lg:p-6 sm:grid-cols-1 sm:gap-y-3 md:gap-y-4 md:rounded-xl lg:rounded-2xl lg:gap-y-5 xl:gap-y-6`}>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-extrabold text-white bg-[#9538E2] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>All Product</NavLink>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Laptops</NavLink>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Phones</NavLink>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Accessories</NavLink>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Smart Watches</NavLink>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>MacBook</NavLink>
-                                        <NavLink to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center col-span-2 sm:pl-7 rounded-[32px] h-[52px] sm:justify-start sm:col-span-1 md:text-base lg:text-lg`}>Iphone</NavLink>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-extrabold text-white bg-[#9538E2] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>All Product</button>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Laptops</button>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Phones</button>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Accessories</button>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Smart Watches</button>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>MacBook</button>
+                                        <button to='/' className={`font-sora text-sm leading-[26px] font-medium text-[#09080F99] bg-[#09080F0D] flex justify-center items-center col-span-2 sm:pl-7 rounded-[32px] h-[52px] sm:justify-start sm:col-span-1 md:text-base lg:text-lg`}>Iphone</button>
                                     </div>
                                 </div>
                                 <div className={`w-full grid-bx`}>

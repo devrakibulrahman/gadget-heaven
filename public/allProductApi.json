@@ -3,7 +3,7 @@
     "product_id": "001",
     "product_title": "Samsung Galaxy S23 Ultra",
     "product_image": "https://i.ibb.co.com/12yZTSh/Samsung-Galaxy-S23-Ultra.jpg",
-    "category": "Smartphones",
+    "category": "phones",
     "price": 1199.99,
     "description": "The Samsung Galaxy S23 Ultra comes with a powerful Snapdragon processor, high-resolution display, and advanced camera technology.",
     "Specification": [
@@ -20,7 +20,7 @@
     "product_id": "002",
     "product_title": "Samsung Galaxy S24 Ultra",
     "product_image": "https://i.ibb.co.com/HxzNxss/Samsung-Galaxy-S24-Ultra.jpg",
-    "category": "Smartphones",
+    "category": "phones",
     "price": 1299.99,
     "description": "The next-gen Samsung Galaxy S24 Ultra offers cutting-edge performance, superior camera systems, and a sleek design.",
     "Specification": [
@@ -37,7 +37,7 @@
     "product_id": "003",
     "product_title": "Google Pixel 9 Pro XL",
     "product_image": "https://i.ibb.co.com/310tH6m/Google-Pixel9-Pro-XL.jpg",
-    "category": "Smartphones",
+    "category": "phones",
     "price": 1099.99,
     "description": "Google Pixel 9 Pro XL features an enhanced camera system and optimized performance with the latest Android software.",
     "Specification": [
@@ -54,7 +54,7 @@
     "product_id": "004",
     "product_title": "Google Pixel 9",
     "product_image": "https://i.ibb.co.com/0rgPHnb/Google-Pixel9.jpg",
-    "category": "Smartphones",
+    "category": "phones",
     "price": 899.99,
     "description": "Google Pixel 9 brings the best of Google's camera software and AI features in a compact form.",
     "Specification": [
@@ -71,7 +71,7 @@
     "product_id": "005",
     "product_title": "Google Pixel 9 Pro",
     "product_image": "https://i.ibb.co.com/cxdsgSx/Google-Pixel9-Pro.jpg",
-    "category": "Smartphones",
+    "category": "phones",
     "price": 999.99,
     "description": "Google Pixel 9 Pro combines powerful hardware and Google's best camera software for professional-level photography.",
     "Specification": [
@@ -88,7 +88,7 @@
     "product_id": "006",
     "product_title": "iPhone 16",
     "product_image": "https://i.ibb.co.com/zr4Xg3h/iphone16.jpg",
-    "category": "Smartphones",
+    "category": ["phones", "iphone"],
     "price": 1399.99,
     "description": "iPhone 16 features Apple's latest technology, offering unparalleled performance and camera quality.",
     "Specification": [
@@ -105,7 +105,7 @@
     "product_id": "007",
     "product_title": "iPhone 14",
     "product_image": "https://i.ibb.co.com/1r42F79/iphone14.jpg",
-    "category": "Smartphones",
+    "category": ["phones", "iphone"],
     "price": 799.99,
     "description": "iPhone 14 offers excellent performance with the A15 Bionic chip and a brilliant camera setup.",
     "Specification": [
@@ -122,7 +122,7 @@
     "product_id": "008",
     "product_title": "iPhone 15",
     "product_image": "https://i.ibb.co.com/cymTB3c/iphone15.jpg",
-    "category": "Smartphones",
+    "category": ["phones", "iphone"],
     "price": 899.99,
     "description": "The iPhone 15 features a sleek design, advanced camera system, and Apple's A16 Bionic chip for superior performance. It introduces USB-C connectivity and improved battery life for a better user experience.",
     "Specification": [
@@ -258,7 +258,7 @@
     "product_id": "104",
     "product_title": "MacBook Pro M3",
     "product_image": "https://i.ibb.co.com/dthnc5D/Mac-Book-Pro-M3-Chip.jpg",
-    "category": "Laptops",
+    "category": ["Laptops", "MacBook"],
     "price": 2999.99,
     "description": "The MacBook Pro M3 is equipped with the latest Apple Silicon chip for unrivaled performance and power efficiency, perfect for intensive professional use.",
     "Specification": [
@@ -275,7 +275,7 @@
     "product_id": "105",
     "product_title": "MacBook Air",
     "product_image": "https://i.ibb.co.com/LtM2K1W/Mac-Book-Air.jpg",
-    "category": "Laptops",
+    "category": ["Laptops", "MacBook"],
     "price": 1099.99,
     "description": "The MacBook Air is known for its thin and lightweight design, featuring Apple's M-series chip for smooth multitasking and efficiency.",
     "Specification": [
@@ -292,7 +292,7 @@
     "product_id": "106",
     "product_title": "MacBook Pro",
     "product_image": "https://i.ibb.co.com/zhVMtxy/Mac-Book-Pro.jpg",
-    "category": "Laptops",
+    "category": ["Laptops", "MacBook"],
     "price": 1999.99,
     "description": "The MacBook Pro offers powerful performance with the M-series chip, excellent display quality, and advanced audio features.",
     "Specification": [
@@ -309,7 +309,7 @@
     "product_id": "201",
     "product_title": "Sony Alpha 1 (A1)",
     "product_image": "https://i.ibb.co.com/M2Q9tfY/Sony-Alpha1-a1.jpg",
-    "category": "Cameras",
+    "category": "Accessories",
     "price": 6499.99,
     "description": "The Sony Alpha 1 (A1) is a flagship full-frame mirrorless camera offering exceptional speed, high resolution, and professional-level video capabilities.",
     "Specification": [
@@ -326,7 +326,7 @@
     "product_id": "202",
     "product_title": "Sony A7R V",
     "product_image": "https://i.ibb.co.com/J5cn97v/Sonya7RV.jpg",
-    "category": "Cameras",
+    "category": "Accessories",
     "price": 3899.99,
     "description": "The Sony A7R V is known for its high-resolution imaging, advanced autofocus system, and superb dynamic range, perfect for detailed photography.",
     "Specification": [
@@ -343,7 +343,7 @@
     "product_id": "203",
     "product_title": "Nikon Z9",
     "product_image": "https://i.ibb.co.com/V9SjcLt/NikonZ9.jpg",
-    "category": "Cameras",
+    "category": "Accessories",
     "price": 5499.99,
     "description": "The Nikon Z9 is a professional full-frame mirrorless camera with groundbreaking features, designed for both photography and video professionals.",
     "Specification": [
@@ -360,7 +360,7 @@
     "product_id": "301",
     "product_title": "AirPods 4",
     "product_image": "https://i.ibb.co.com/xJvcKRd/AirPods4.jpg",
-    "category": "Wireless Earbuds",
+    "category": "Accessories",
     "price": 249.99,
     "description": "The AirPods 4 offer an immersive sound experience with enhanced noise cancellation and a longer battery life, designed for seamless integration with Apple devices.",
     "Specification": [
@@ -377,7 +377,7 @@
     "product_id": "302",
     "product_title": "Galaxy Buds 3 Pro",
     "product_image": "https://i.ibb.co.com/FY7KrMt/Galaxy-Buds3-Pro.jpg",
-    "category": "Wireless Earbuds",
+    "category": "Accessories",
     "price": 229.99,
     "description": "Galaxy Buds 3 Pro are premium earbuds from Samsung with excellent sound quality, adaptive ANC, and a comfortable fit.",
     "Specification": [
