@@ -56,8 +56,8 @@ const ProductDetailsCard = () => {
                     </div>
                     <div className={`w-full flex items-center gap-x-3 mt-3 md:gap-x-4 md:mt-4`}>
                         <div className={`w-auto`}>
-                            <button className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full'>
-                                <span className={`font-sora text-sm leading-[26px] font-bold text-white`}>Add To Cart</span>
+                            <button className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
+                                <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
                                 <div className={`w-auto`}>
                                     <RiShoppingCartLine color={`#fff`} size={22}/>
                                 </div>
