@@ -1,6 +1,7 @@
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx';
+import { LoadData } from '../../constants/ContextApi.jsx';
 
 const Root = () => {
     const routeLocation = useLocation();
@@ -9,7 +10,9 @@ const Root = () => {
             <Navbar></Navbar>
             <ScrollRestoration></ScrollRestoration>
             <div className={`w-full min-h-[calc(1080px_-_678px)] ${routeLocation.pathname === '/' || 'min-h-[calc(1080px_-_642px)]'}`}>
-                <Outlet />
+                <LoadData>
+                    <Outlet />
+                </LoadData>
             </div>
             <Footer></Footer>
         </div>

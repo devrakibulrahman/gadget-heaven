@@ -1,19 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import '../css/style.css';
 import ProductItems from "../components/ProductItems";
+import { LoadApiData } from "../../constants/ContextApi";
 
 const Home = () => {
-    // all state declare here ------------------------------>
-    const [allProducts, setAllProducts] = useState([]);
-
-    // data fetch here ------------------------------------->
-    useEffect( () => {
-        fetch('/allProductApi.json')
-            .then((res) => res.json())
-            .then((data) => setAllProducts(data))
-            .catch((err) => console.log(err))
-    },[]);
+    // get data from context api ------------------------------>
+    const data = useContext(LoadApiData);
 
     return (
         <div className={`w-full`}>
@@ -64,7 +57,7 @@ const Home = () => {
                                 </div>
                                 <div className={`w-full grid-bx`}>
                                     {
-                                        allProducts.map((products) => <ProductItems key={products.product_id} product={products}/>)
+                                        data.map((products) => <ProductItems key={products.product_id} product={products}/>)
                                     }
                                 </div>
                             </div>
