@@ -9,7 +9,7 @@ const Home = () => {
 
     // data fetch here ------------------------------------->
     useEffect( () => {
-        fetch('allProductApi.json')
+        fetch('/allProductApi.json')
             .then((res) => res.json())
             .then((data) => setAllProducts(data))
             .catch((err) => console.log(err))

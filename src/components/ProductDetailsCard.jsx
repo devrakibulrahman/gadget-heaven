@@ -3,6 +3,7 @@ import { BiSolidStar, BiSolidStarHalf, BiStar } from "react-icons/bi";
 import { RiShoppingCartLine } from 'react-icons/ri'
 
 const ProductDetailsCard = () => {
+
     return (
         <div className={`w-full min-h-[565px] bg-white p-4 rounded-xl md:p-5 lg:p-6 xl:p-7 2xl:p-8 md:rounded-2xl lg:rounded-3xl`}>
             <div className={`w-full flex justify-center flex-col gap-y-5 lg:flex-row lg:gap-x-8`}>

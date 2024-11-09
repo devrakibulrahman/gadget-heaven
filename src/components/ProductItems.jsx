@@ -3,16 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 const ProductItems = ({product}) => {
     // product object destructure ----------------------------->
-    const {product_id, product_title, product_image, price} = product;
+    const {product_title, product_image, price} = product;
     
     // state and hooks declare here --------------------------->
     const pageNavigate = useNavigate();
 
     // event handle declare here ------------------------------>
     const handlePageNavigate = () => {
-        pageNavigate('/product details');
+        pageNavigate(`/product details`);
     };
-
 
     return (
         <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-full md:p-6 xl:min-h-[453px] flex flex-col`}>
