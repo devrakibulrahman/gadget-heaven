@@ -22,7 +22,7 @@ const ProductItems = ({product}) => {
                 </div>
                 <div className={`w-full mt-6 flex flex-col justify-start gap-y-1 md:gap-y-2 lg:gap-y-3`}>
                     <h1 className={`font-sora text-lg leading-[20px] font-semibold text-[#09080F] md:text-xl md:leading-[30px] lg:text-2xl`}>{product_title}</h1>
-                    <p className={`font-sora text-base leading-[25px] font-medium text-[#09080F99] md:text-lg lg:text-xl`}>Price : {price}</p>
+                    <p className={`font-sora text-base leading-[25px] font-medium text-[#09080F99] md:text-lg lg:text-xl`}>Price : ${price}</p>
                 </div>
             </div>
             <div className={`w-full mt-4`}>
