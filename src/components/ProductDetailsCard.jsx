@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { BiSolidStar, BiSolidStarHalf, BiStar } from "react-icons/bi";
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { useLoaderData } from 'react-router-dom';
-// import { useContext, useState } from 'react';
-// import { LoadApiData } from '../../constants/ContextApi';
 
 const ProductDetailsCard = ({idFromURL}) => {
     // get data from api ------------------------------------------>
@@ -12,6 +10,7 @@ const ProductDetailsCard = ({idFromURL}) => {
     
     // find the data and show data in display --------------------->
     const findProductDetails = data.find((product) => product.product_id === idFromURL.productId);
+    
     // destructure the props -------------------------------------->
     const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
 

@@ -17,35 +17,35 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`w-full ${pathname === '/' && 'px-4 md:pt-[30px]'}`}>
-            <div className={`w-full ${pathname === '/' && 'pl-[6px] pr-[6px] border-l border-r border-[#e2e2e2] md:border-t md:pt-[6px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl'} `}>
-                <div className={`w-full py-[30px] ${pathname === '/' ? 'bg-[#9538E2] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl' : 'bg-white'} relative`}>
+        <div className={`w-full ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') && 'px-4 md:pt-[30px]'}`}>
+            <div className={`w-full ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') && 'pl-[6px] pr-[6px] border-l border-r border-[#e2e2e2] md:border-t md:pt-[6px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl'} `}>
+                <div className={`w-full py-[30px] ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'bg-[#9538E2] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-tl-3xl lg:rounded-tr-3xl' : 'bg-white'} relative`}>
                     <div className='container mx-auto px-4'>
                         <div className={`w-full flex items-center justify-between`}>
                             <div className={`w-auto`}>
-                                <h1 className={`font-sora text-xl leading-[26px] font-bold ${pathname === '/' ? 'text-[#FFFFFF]' : 'text-[#0B0B0B]'} cursor-pointer`}>Gadget Heaven</h1>
+                                <NavLink to='/' className={`font-sora text-xl leading-[26px] font-bold ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#FFFFFF]' : 'text-[#0B0B0B]'} cursor-pointer`}>Gadget Heaven</NavLink>
                             </div>
                             <div className={`w-auto hidden md:block`}>
                                 <nav className={`w-auto`}>
                                     <ul className={`w-auto flex items-center justify-center gap-x-5 md:gap-x-[35px] lg:gap-x-[48px]`}>
-                                        <NavLink to='/' className={`font-sora text-base leading-5 ${pathname === '/' ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
-                                        <NavLink to='/statistics' className={`font-sora text-base leading-5 ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : (pathname === '/' ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Statistics</NavLink>
-                                        <NavLink to='/dashboard' className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : (pathname === '/' ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
+                                        <NavLink to='/' className={`font-sora text-base leading-5 ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
+                                        <NavLink to='/statistics' className={`font-sora text-base leading-5 ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Statistics</NavLink>
+                                        <NavLink to='/dashboard' className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
                                     </ul>
                                 </nav>
                             </div>
                             <div className={`w-auto flex items-center justify-center gap-x-3`}>
                                 <div className={`w-auto flex items-center justify-center gap-x-3 md:gap-x-4`}>
                                     <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
-                                        <i className={`ri-shopping-cart-line text-lg ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
-                                        <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${pathname === '/' ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
-                                            <span className={`font-sora text-[10px] font-medium ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
+                                        <i className={`ri-shopping-cart-line text-lg ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
+                                        <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
+                                            <span className={`font-sora text-[10px] font-medium ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
                                         </div>
                                     </div>
                                     <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
-                                        <i className={`ri-heart-line text-lg ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
-                                        <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${pathname === '/' ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
-                                            <span className={`font-sora text-[10px] font-medium ${pathname === '/' ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
+                                        <i className={`ri-heart-line text-lg ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
+                                        <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
+                                            <span className={`font-sora text-[10px] font-medium ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
                                         </div>
                                     </div>
                                 </div>

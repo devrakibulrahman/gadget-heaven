@@ -139,7 +139,7 @@
     "product_id": "401",
     "product_title": "Apple Watch SE 2",
     "product_image": "https://i.ibb.co.com/g624tzM/Apple-Watch-SE2.jpg",
-    "category": "Smartwatches",
+    "category": "smartwatches",
     "price": 249.99,
     "description": "The Apple Watch SE 2 combines essential features for a great smartwatch experience with advanced health and fitness tracking.",
     "Specification": [
@@ -156,7 +156,7 @@
     "product_id": "402",
     "product_title": "Apple Watch Ultra 2",
     "product_image": "https://i.ibb.co.com/pfxpmf3/Apple-Watch-Ultra2.jpg",
-    "category": "Smartwatches",
+    "category": "smartwatches",
     "price": 799.99,
     "description": "The Apple Watch Ultra 2 is designed for adventurers and athletes, offering rugged design and advanced performance features.",
     "Specification": [
@@ -173,7 +173,7 @@
     "product_id": "403",
     "product_title": "Apple Watch Series 10",
     "product_image": "https://i.ibb.co.com/NVgwZgQ/Apple-Watch-Series10.webp",
-    "category": "Smartwatches",
+    "category": "smartwatches",
     "price": 499.99,
     "description": "The Apple Watch Series 10 comes with cutting-edge health monitoring features, an improved processor, and a sleek design.",
     "Specification": [
@@ -190,7 +190,7 @@
     "product_id": "404",
     "product_title": "Samsung Galaxy Watch 6 Classic",
     "product_image": "https://i.ibb.co.com/z5Y60cg/Samsung-Galaxy-Watch6-Classic.jpg",
-    "category": "Smartwatches",
+    "category": "smartwatches",
     "price": 399.99,
     "description": "The Samsung Galaxy Watch 6 Classic offers a premium design, powerful health features, and smooth integration with the Samsung ecosystem.",
     "Specification": [
@@ -207,7 +207,7 @@
     "product_id": "101",
     "product_title": "Surface Laptop Studio 2",
     "product_image": "https://i.ibb.co.com/W0mJXN4/Surface-Laptop-Studio2.png",
-    "category": "Laptops",
+    "category": "laptops",
     "price": 2499.99,
     "description": "The Surface Laptop Studio 2 is a versatile device offering a seamless transition between laptop, stage, and studio modes, with high performance for professional tasks.",
     "Specification": [
@@ -224,7 +224,7 @@
     "product_id": "102",
     "product_title": "Surface Laptop Go 3",
     "product_image": "https://i.ibb.co.com/4J5SZhb/Surface-Laptop-Go3.jpg",
-    "category": "Laptops",
+    "category": "laptops",
     "price": 799.99,
     "description": "Surface Laptop Go 3 is a lightweight and portable laptop designed for everyday tasks with a responsive touch display.",
     "Specification": [
@@ -241,7 +241,7 @@
     "product_id": "103",
     "product_title": "Microsoft Surface Laptop 7th Edition",
     "product_image": "https://i.ibb.co.com/T4WTsFZ/Microsoft-Surface-Laptop7th-Edition.jpg",
-    "category": "Laptops",
+    "category": "laptops",
     "price": 1399.99,
     "description": "The 7th Edition of the Microsoft Surface Laptop offers powerful performance and a sleek design ideal for work and play.",
     "Specification": [
@@ -258,7 +258,7 @@
     "product_id": "104",
     "product_title": "MacBook Pro M3",
     "product_image": "https://i.ibb.co.com/dthnc5D/Mac-Book-Pro-M3-Chip.jpg",
-    "category": ["Laptops", "MacBook"],
+    "category": ["laptops", "macbook"],
     "price": 2999.99,
     "description": "The MacBook Pro M3 is equipped with the latest Apple Silicon chip for unrivaled performance and power efficiency, perfect for intensive professional use.",
     "Specification": [
@@ -275,7 +275,7 @@
     "product_id": "105",
     "product_title": "MacBook Air",
     "product_image": "https://i.ibb.co.com/LtM2K1W/Mac-Book-Air.jpg",
-    "category": ["Laptops", "MacBook"],
+    "category": ["laptops", "macbook"],
     "price": 1099.99,
     "description": "The MacBook Air is known for its thin and lightweight design, featuring Apple's M-series chip for smooth multitasking and efficiency.",
     "Specification": [
@@ -292,7 +292,7 @@
     "product_id": "106",
     "product_title": "MacBook Pro",
     "product_image": "https://i.ibb.co.com/zhVMtxy/Mac-Book-Pro.jpg",
-    "category": ["Laptops", "MacBook"],
+    "category": ["laptops", "macbook"],
     "price": 1999.99,
     "description": "The MacBook Pro offers powerful performance with the M-series chip, excellent display quality, and advanced audio features.",
     "Specification": [
@@ -309,7 +309,7 @@
     "product_id": "201",
     "product_title": "Sony Alpha 1 (A1)",
     "product_image": "https://i.ibb.co.com/M2Q9tfY/Sony-Alpha1-a1.jpg",
-    "category": "Accessories",
+    "category": "accessories",
     "price": 6499.99,
     "description": "The Sony Alpha 1 (A1) is a flagship full-frame mirrorless camera offering exceptional speed, high resolution, and professional-level video capabilities.",
     "Specification": [
@@ -326,7 +326,7 @@
     "product_id": "202",
     "product_title": "Sony A7R V",
     "product_image": "https://i.ibb.co.com/J5cn97v/Sonya7RV.jpg",
-    "category": "Accessories",
+    "category": "accessories",
     "price": 3899.99,
     "description": "The Sony A7R V is known for its high-resolution imaging, advanced autofocus system, and superb dynamic range, perfect for detailed photography.",
     "Specification": [
@@ -343,7 +343,7 @@
     "product_id": "203",
     "product_title": "Nikon Z9",
     "product_image": "https://i.ibb.co.com/V9SjcLt/NikonZ9.jpg",
-    "category": "Accessories",
+    "category": "accessories",
     "price": 5499.99,
     "description": "The Nikon Z9 is a professional full-frame mirrorless camera with groundbreaking features, designed for both photography and video professionals.",
     "Specification": [
@@ -360,7 +360,7 @@
     "product_id": "301",
     "product_title": "AirPods 4",
     "product_image": "https://i.ibb.co.com/xJvcKRd/AirPods4.jpg",
-    "category": "Accessories",
+    "category": "accessories",
     "price": 249.99,
     "description": "The AirPods 4 offer an immersive sound experience with enhanced noise cancellation and a longer battery life, designed for seamless integration with Apple devices.",
     "Specification": [
@@ -377,7 +377,7 @@
     "product_id": "302",
     "product_title": "Galaxy Buds 3 Pro",
     "product_image": "https://i.ibb.co.com/FY7KrMt/Galaxy-Buds3-Pro.jpg",
-    "category": "Accessories",
+    "category": "accessories",
     "price": 229.99,
     "description": "Galaxy Buds 3 Pro are premium earbuds from Samsung with excellent sound quality, adaptive ANC, and a comfortable fit.",
     "Specification": [

@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
 import '../css/style.css';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const ProductItems = ({product}) => {
     // product object destructure ----------------------------->

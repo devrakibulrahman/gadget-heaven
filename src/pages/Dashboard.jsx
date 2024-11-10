@@ -1,7 +1,7 @@
-import PageHeading from "../components/PageHeading";
-import { useState } from "react";
 import '../css/style.css';
+import { useState } from "react";
 import { HiOutlineAdjustments } from "react-icons/hi";
+import PageHeading from "../components/PageHeading";
 import ProductCart from "../components/ProductCart";
 import ProductWishList from "../components/ProductWishList";
 
