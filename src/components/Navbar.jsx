@@ -54,7 +54,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <div className={`w-auto md:hidden`} onClick={handleNavActive}>
-                                    <i className={`ri-menu-fill text-2xl ${pathname === '/' ? 'text-white' : 'text-[#0B0B0B]'} cursor-pointer`}></i>
+                                    <i className={`ri-menu-fill text-2xl ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-white' : 'text-[#0B0B0B]'} cursor-pointer`}></i>
                                 </div>
                             </div>
                         </div>
