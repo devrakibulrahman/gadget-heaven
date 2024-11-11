@@ -6,13 +6,11 @@ const ProductDetails = () => {
     // get product id from url using useParams -------------------->
     const idFromURL = useParams();
 
-    
-
     return (
         <>
             <ScrollRestoration></ScrollRestoration>
             <div className={`w-full`}>
-                <div className={`w-full mb-[650px] sm:mb-[555px] md:mb-[900px] lg:mb-[400px]`}>
+                <div className={`w-full mb-[650px] sm:mb-[555px] md:mb-[900px] lg:mb-[480px]`}>
                     <div className={`relative w-full min-h-[465px] bg-[#9538E2] py-8`}>
                         <div className={`container mx-auto px-4`}>
                             <div className={`w-full relative`}>

@@ -14,6 +14,13 @@ const setDataToCartLocalStore = (cart) => {
     localStorage.setItem("cart", setCartData);
 };
 
+// delete data from LocalStore ---------------------->
+const deleteDataFromLocalStore = (cartId) => {
+    const cart = getDataFromCartToLocalStore();
+    const deleteData = cart.filter((remove) => remove.product_Id !== cartId);
+    setDataToCartLocalStore(deleteData);
+};
+
 // add data to LocalStore --------------------------->
 const addDataToLocalStore = (productId) => {
     const dataFromLocalStore = getDataFromCartToLocalStore();
@@ -23,4 +30,4 @@ const addDataToLocalStore = (productId) => {
 
 
 
-export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore };
+export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore };

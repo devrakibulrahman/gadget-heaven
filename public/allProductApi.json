@@ -206,10 +206,10 @@
   {
     "product_id": "101",
     "product_title": "Surface Laptop Studio 2",
-    "product_image": "https://i.ibb.co.com/W0mJXN4/Surface-Laptop-Studio2.png",
+    "product_image": "https://i.ibb.co.com/Fh5qHyY/Surface-Laptop-Studio2.webp",
     "category": "laptops",
     "price": 2499.99,
-    "description": "The Surface Laptop Studio 2 is a versatile device offering a seamless transition between laptop, stage, and studio modes, with high performance for professional tasks.",
+    "description": "The Surface Laptop Studio 2 is a 2-in-1 device with a tilting touchscreen and strong performance. It’s ideal for creative tasks and multitasking.",
     "Specification": [
       "14.4-inch PixelSense touchscreen display",
       "Intel Core i7 13th Gen processor",
@@ -308,10 +308,10 @@
   {
     "product_id": "201",
     "product_title": "Sony Alpha 1 (A1)",
-    "product_image": "https://i.ibb.co.com/M2Q9tfY/Sony-Alpha1-a1.jpg",
+    "product_image": "https://i.ibb.co.com/71Qy1bL/Sony-Alpha1-a1.jpg",
     "category": "accessories",
     "price": 6499.99,
-    "description": "The Sony Alpha 1 (A1) is a flagship full-frame mirrorless camera offering exceptional speed, high resolution, and professional-level video capabilities.",
+    "description": "The Sony Alpha 1 (A1) is a flagship 50.1MP mirrorless camera with 8K video and high-speed shooting, designed for top-tier professional performance.",
     "Specification": [
       "50.1 MP full-frame stacked Exmor RS CMOS sensor",
       "8K 30p and 4K 120p video recording",
@@ -325,10 +325,10 @@
   {
     "product_id": "202",
     "product_title": "Sony A7R V",
-    "product_image": "https://i.ibb.co.com/J5cn97v/Sonya7RV.jpg",
+    "product_image": "https://i.ibb.co.com/qsCncfC/Sony-A7-R-V.jpg",
     "category": "accessories",
     "price": 3899.99,
-    "description": "The Sony A7R V is known for its high-resolution imaging, advanced autofocus system, and superb dynamic range, perfect for detailed photography.",
+    "description": "The Sony A7R V is a 61MP mirrorless camera with advanced AI autofocus, perfect for detailed professional photography.",
     "Specification": [
       "61 MP full-frame back-illuminated Exmor R CMOS sensor",
       "4K 60p video recording",
@@ -342,7 +342,7 @@
   {
     "product_id": "203",
     "product_title": "Nikon Z9",
-    "product_image": "https://i.ibb.co.com/V9SjcLt/NikonZ9.jpg",
+    "product_image": "https://i.ibb.co.com/7RwDnHN/NikonZ9.jpg",
     "category": "accessories",
     "price": 5499.99,
     "description": "The Nikon Z9 is a professional full-frame mirrorless camera with groundbreaking features, designed for both photography and video professionals.",

@@ -1,6 +1,7 @@
 import '../css/style.css';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HiOutlineAdjustments } from "react-icons/hi";
+import { CartContext } from '../../constants/CartContext';
 import PageHeading from "../components/PageHeading";
 import ProductCart from "../components/ProductCart";
 import ProductWishList from "../components/ProductWishList";
@@ -9,6 +10,7 @@ const Dashboard = () => {
     // state declare here -------------------------->
     const [cartTabActive, setCartTabActive] = useState(true);
     const [wishListActive, setWishListActive] = useState(false);
+    const {saveCartData} = useContext(CartContext);
 
     // tab button event handle --------------------->
     const handleCartTab = (str) => {
@@ -24,6 +26,10 @@ const Dashboard = () => {
             return;
         };
     };
+
+    const productPrice = saveCartData.map((productPrice) => productPrice.price);
+    const totalPrice = productPrice.reduce((total, curr) => total + curr, 0);
+    const TotalProductPrice = parseFloat(totalPrice.toFixed(2));
 
     return (
         <div className={`w-full`}>
@@ -54,7 +60,7 @@ const Dashboard = () => {
                                             <h1 className={`font-sora text-lg leading-[20px] font-semibold text-[#09080F] md:text-xl md:leading-[30px] lg:text-2xl`}>Cart</h1>
                                         </div>
                                         <div className={`w-auto text-center`}>
-                                            <h1 className={`font-sora text-lg leading-[20px] font-semibold text-[#09080F] md:text-xl md:leading-[30px] lg:text-2xl`}>Total Cost: 000.00</h1>
+                                            <h1 className={`font-sora text-lg leading-[20px] font-semibold text-[#09080F] md:text-xl md:leading-[30px] lg:text-2xl`}>Total Cost: $ {TotalProductPrice}</h1>
                                         </div>
                                     </div>
                                     <div className={`w-auto`}>

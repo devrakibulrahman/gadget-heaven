@@ -16,13 +16,15 @@ const ProductDetailsCard = ({idFromURL}) => {
     const {saveCartData} = useContext(CartContext);
 
     // find the data and show data in display --------------------->
-    const findProductDetails = data.find((product) => product.product_id === idFromURL.productId);
+    const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
 
     // destructure the props -------------------------------------->
     const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
-    
-    const handleCart = (productId) => {
-        if(saveCartData.includes(productId)){
+    const saveCartDataIds = saveCartData.map((ids) => ids.product_id);
+
+    const handleCart = (cartId, saveCartDataIds) => {
+        
+        if(saveCartDataIds.includes(cartId.product_id)){
             toast.warn('Already Add to Cart !!', {
                 position: "top-center",
                 autoClose: 2000,
@@ -36,7 +38,7 @@ const ProductDetailsCard = ({idFromURL}) => {
             return;
         };
 
-        if(!saveCartData.includes(productId)){
+        if(!saveCartDataIds.includes(cartId.product_id)){
             toast.success('Add to cart successful',{
                 position: "top-center",
                 autoClose: 2000,
@@ -47,9 +49,9 @@ const ProductDetailsCard = ({idFromURL}) => {
                 progress: undefined,
                 theme: "light",
             });
-            const newCartData = [...productCart, productId];
+            const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
-            addDataToLocalStore(productId);
+            addDataToLocalStore(cartId);
         };
     };
 
@@ -105,7 +107,7 @@ const ProductDetailsCard = ({idFromURL}) => {
                         </div>
                         <div className={`w-full flex items-center gap-x-3 mt-3 md:gap-x-4 md:mt-4`}>
                             <div className={`w-auto`}>
-                                <button onClick={() => handleCart(idFromURL.productId)} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
+                                <button onClick={() => handleCart(idFromURL, saveCartDataIds)} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
                                     <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
                                     <div className={`w-auto`}>
                                         <RiShoppingCartLine color={`#fff`} size={22}/>

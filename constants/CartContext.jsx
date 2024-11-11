@@ -6,9 +6,6 @@ const CartContext = createContext();
 
 const CartProvider = ({children}) => {
     const [productCart, setProductCart] = useState([]);
-    // console.log(productCart);
-    // const [loadData, setLoadData] = useState([]);
-    // console.log(loadData);
     const [saveCartData, setSaveCartData] = useState([]);
     // console.log(saveCartData);
 
@@ -26,12 +23,14 @@ const CartProvider = ({children}) => {
 
             const productCartData = [];
             for(const id of cartData){
-                productCartData.push(id);
+                const findData = productCart.find((product) => product.product_id === id.product_id);
+                if(findData){
+                    productCartData.push(findData);
+                }
             };
             setSaveCartData(productCartData);
-            return;
         };
-    }, [productCart.length])
+    }, [productCart])
 
     return(
         <CartContext.Provider value={{productCart, setProductCart, saveCartData}}>

@@ -10,7 +10,7 @@ const Navbar = () => {
     const location = useLocation();
 
     const {saveCartData} = useContext(CartContext);
-    console.log(saveCartData);
+    // console.log(saveCartData);
 
     // all destructure array and object ------------------------>
     const {pathname} = location;
