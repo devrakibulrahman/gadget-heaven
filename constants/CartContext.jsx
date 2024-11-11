@@ -1,18 +1,30 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { getDataFromCartToLocalStore, deleteDataFromLocalStore } from "../src/utilities/LocalStore";
+import { toast } from "react-toastify";
 
 const CartContext = createContext();
 
 const CartProvider = ({children}) => {
     const [productCart, setProductCart] = useState([]);
     const [saveCartData, setSaveCartData] = useState([]);
-    console.log(saveCartData);
 
     const handleDeleteToCart = (data) => {
         const removeData = saveCartData.filter((remData) => remData.product_id !== data.product_id);
+        if(removeData){
+            toast.success('Delete From Cart !!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "light",
+            });
+        };
         setSaveCartData(removeData);
-        deleteDataFromLocalStore(data)
+        deleteDataFromLocalStore(data);
     };
 
     useEffect(() => {

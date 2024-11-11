@@ -15,19 +15,47 @@ const setDataToCartLocalStore = (cart) => {
 };
 
 // delete data from LocalStore ---------------------->
-const deleteDataFromLocalStore = (cartId) => {
+const deleteDataFromLocalStore = (productId) => {
     const cart = getDataFromCartToLocalStore();
-    const deleteData = cart.filter((remove) => remove.product_id !== cartId.product_id);
+    const deleteData = cart.filter((remove) => remove.product_id !== productId.product_id);
     setDataToCartLocalStore(deleteData);
 };
 
-// add data to LocalStore --------------------------->
+// add data to LocalStore (add to cart) ------------->
 const addDataToLocalStore = (productId) => {
     const dataFromLocalStore = getDataFromCartToLocalStore();
     dataFromLocalStore.push(productId);
     setDataToCartLocalStore(dataFromLocalStore);
 };
 
+// data get from LocalStore (wishlist) -------------->
+const getDataFromWishlistToLocalStore = () => {
+    const getWishlistData = localStorage.getItem('wishlist');
+    if(getWishlistData) {
+        const wishlistData = JSON.parse(getWishlistData)
+        return wishlistData;
+    };
+    return [];
+};
 
+// data set to LocalStore (wishlist) ---------------->
+const setDataToWishlistLocalStore = (product) => {
+    const setWishlistData = JSON.stringify(product);
+    localStorage.setItem("wishlist", setWishlistData);
+};
 
-export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore };
+// delete data from LocalStore (wishlist) ----------->
+const deleteDataFromWishlist = (productId) => {
+    const wishlist = getDataFromWishlistToLocalStore();
+    const deleteData = wishlist.filter((remove) => remove.product_id !== productId.product_id);
+    setDataToWishlistLocalStore(deleteData);
+};
+
+// add data to LocalStore (wishlist) ---------------->
+const addDataToWishlistLocalStore = (productId) => {
+    const dataFromLocalStore = getDataFromWishlistToLocalStore();
+    dataFromLocalStore.push(productId);
+    setDataToWishlistLocalStore(dataFromLocalStore);
+};
+
+export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore, getDataFromWishlistToLocalStore, setDataToWishlistLocalStore, addDataToWishlistLocalStore, deleteDataFromWishlist };

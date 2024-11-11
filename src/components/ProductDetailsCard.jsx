@@ -6,14 +6,18 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { useLoaderData } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../constants/CartContext';
-import { addDataToLocalStore } from '../utilities/LocalStore';
+import { addDataToLocalStore, addDataToWishlistLocalStore } from '../utilities/LocalStore';
 import { toast } from 'react-toastify';
+import { WishListContext } from '../../constants/WishListContext';
 
 const ProductDetailsCard = ({idFromURL}) => {
     // get data from api ------------------------------------------>
     const data = useLoaderData();
     const {productCart, setProductCart} = useContext(CartContext);
     const {saveCartData} = useContext(CartContext);
+    const {productWishList, setProductWishList} = useContext(WishListContext)
+    const {saveWishListData} = useContext(WishListContext);
+
 
     // find the data and show data in display --------------------->
     const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
@@ -21,11 +25,12 @@ const ProductDetailsCard = ({idFromURL}) => {
     // destructure the props -------------------------------------->
     const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
     const saveCartDataIds = saveCartData.map((ids) => ids.product_id);
+    const saveWishlistDataIds = saveWishListData.map((ids) => ids.product_id);
 
     const handleCart = (cartId, saveCartDataIds) => {
         
         if(saveCartDataIds.includes(cartId.product_id)){
-            toast.warn('Already Add to Cart !!', {
+            toast.warn('Already Add To Cart !!', {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -39,7 +44,7 @@ const ProductDetailsCard = ({idFromURL}) => {
         };
 
         if(!saveCartDataIds.includes(cartId.product_id)){
-            toast.success('Add to cart successful',{
+            toast.success('Add To Cart Successful',{
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -52,6 +57,40 @@ const ProductDetailsCard = ({idFromURL}) => {
             const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
             addDataToLocalStore(cartId);
+        };
+    };
+
+
+
+    const handleWishlist = (wishlistId, saveWishlistDataIds) => {
+        if(saveWishlistDataIds.includes(wishlistId.product_id)){
+            toast.warn('Already Add To Wishlist !!', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "light",
+                });
+            return;
+        };
+
+        if(!saveWishlistDataIds.includes(wishlistId.product_id)){
+            toast.success('Add To Wishlist successful',{
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "light",
+            });
+            const newWishlistData = [...productWishList, wishlistId];
+            setProductWishList(newWishlistData);
+            addDataToWishlistLocalStore(wishlistId);
         };
     };
 
@@ -115,7 +154,7 @@ const ProductDetailsCard = ({idFromURL}) => {
                                 </button>
                             </div>
                             <div className={`w-auto`}>
-                                <button className={`w-[48px] h-[48px] bg-white border border-[#09080F0D] flex items-center justify-center rounded-full transition ease-in-out duration-300 hover:bg-[#9538E2] hover:border-[#9538E2] group`}>
+                                <button onClick={() => handleWishlist(idFromURL, saveWishlistDataIds)} className={`w-[48px] h-[48px] bg-white border border-[#09080F0D] flex items-center justify-center rounded-full transition ease-in-out duration-300 hover:bg-[#9538E2] hover:border-[#9538E2] group`}>
                                     <i className="ri-heart-line text-[22px] group-hover:text-white"></i>
                                 </button>
                             </div>

@@ -2,6 +2,7 @@ import 'remixicon/fonts/remixicon.css';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../constants/CartContext';
+import { WishListContext } from '../../constants/WishListContext';
 
 
 const Navbar = () => {
@@ -10,7 +11,9 @@ const Navbar = () => {
     const location = useLocation();
 
     const {saveCartData} = useContext(CartContext);
+    const {saveWishListData} = useContext(WishListContext);
     // console.log(saveCartData);
+    // console.log(saveWishListData);
 
     // all destructure array and object ------------------------>
     const {pathname} = location;
@@ -49,7 +52,7 @@ const Navbar = () => {
                                     <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
                                         <i className={`ri-heart-line text-lg ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
                                         <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
-                                            <span className={`font-sora text-[10px] font-medium ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>1</span>
+                                            <span className={`font-sora text-[10px] font-medium ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>{saveWishListData.length}</span>
                                         </div>
                                     </div>
                                 </div>
