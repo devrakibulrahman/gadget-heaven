@@ -21,4 +21,6 @@ const addDataToLocalStore = (productId) => {
     setDataToCartLocalStore(dataFromLocalStore);
 };
 
+
+
 export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore };
