@@ -10,8 +10,8 @@ const Dashboard = () => {
     // state declare here -------------------------->
     const [cartTabActive, setCartTabActive] = useState(true);
     const [wishListActive, setWishListActive] = useState(false);
-    const {saveCartData} = useContext(CartContext);
-    
+    const {saveCartData, sortByDescendingPrice} = useContext(CartContext);
+
     // tab button event handle --------------------->
     const handleCartTab = (str) => {
         if(str === 'cart'){
@@ -66,7 +66,7 @@ const Dashboard = () => {
                                     <div className={`w-auto`}>
                                         <div className={`w-full flex items-center justify-center gap-x-3 md:gap-x-4`}>
                                             <div className={`w-auto`}>
-                                                <button className={`radial-btn w-[160px] h-[48px] rounded-full flex items-center justify-center p-[2px] transition ease-in-out duration-300 group md:w-[175px] md:h-[50px] lg:w-[190px] lg:h-[52px]`}>
+                                                <button onClick={() => sortByDescendingPrice()} className={`radial-btn w-[160px] h-[48px] rounded-full flex items-center justify-center p-[2px] transition ease-in-out duration-300 group md:w-[175px] md:h-[50px] lg:w-[190px] lg:h-[52px]`}>
                                                     <div className={`btn-bg flex items-center justify-center gap-x-2 bg-white w-full h-full rounded-full btn-bg-transition`}>
                                                         <span  className={`font-sora text-sm leading-[26px] font-semibold md:text-base lg:text-lg`}>Sort by Price</span>
                                                         <div className={`w-auto`}>

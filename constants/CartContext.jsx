@@ -8,6 +8,7 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     const [productCart, setProductCart] = useState([]);
     const [saveCartData, setSaveCartData] = useState([]);
+    console.log(saveCartData)
 
     const handleDeleteToCart = (data) => {
         const removeData = saveCartData.filter((remData) => remData.product_id !== data.product_id);
@@ -26,6 +27,13 @@ const CartProvider = ({children}) => {
         setSaveCartData(removeData);
         deleteDataFromLocalStore(data);
     };
+
+    const sortByDescendingPrice = () => {
+        const sortDescendingOrder = saveCartData.map((items) => items.price);
+        const descendingPrice = saveCartData.filter((items) => sortDescendingOrder.includes(items.price));
+              descendingPrice.sort((a, b) => b.price - a.price);
+        setSaveCartData(descendingPrice);
+    }; 
 
     useEffect(() => {
         fetch('/allProductApi.json')
@@ -51,7 +59,7 @@ const CartProvider = ({children}) => {
     }, [productCart])
 
     return(
-        <CartContext.Provider value={{productCart, setProductCart, saveCartData, handleDeleteToCart}}>
+        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice}}>
             {children}
         </CartContext.Provider>
     );
