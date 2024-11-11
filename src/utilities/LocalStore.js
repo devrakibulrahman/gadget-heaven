@@ -17,7 +17,7 @@ const setDataToCartLocalStore = (cart) => {
 // delete data from LocalStore ---------------------->
 const deleteDataFromLocalStore = (cartId) => {
     const cart = getDataFromCartToLocalStore();
-    const deleteData = cart.filter((remove) => remove.product_Id !== cartId);
+    const deleteData = cart.filter((remove) => remove.product_id !== cartId.product_id);
     setDataToCartLocalStore(deleteData);
 };
 

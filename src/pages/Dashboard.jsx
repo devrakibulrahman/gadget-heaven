@@ -11,7 +11,7 @@ const Dashboard = () => {
     const [cartTabActive, setCartTabActive] = useState(true);
     const [wishListActive, setWishListActive] = useState(false);
     const {saveCartData} = useContext(CartContext);
-
+    
     // tab button event handle --------------------->
     const handleCartTab = (str) => {
         if(str === 'cart'){

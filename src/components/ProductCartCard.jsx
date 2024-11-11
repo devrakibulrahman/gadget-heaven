@@ -1,7 +1,11 @@
 import { MdOutlineClose } from "react-icons/md";
 import PropTypes from 'prop-types';
+import { useContext } from "react";
+import { CartContext } from "../../constants/CartContext";
 
 const ProductCartCard = ({cart}) => {
+    const {handleDeleteToCart} = useContext(CartContext);
+    
     return (
         <div className={`w-full p-5 min-h-[125px] bg-white rounded-xl sm:w-[455px] md:w-full md:p-6 md:rounded-2xl lg:p-7 xl:p-8`}>
             <div className={`w-full flex flex-col gap-y-3 sm:gap-y-5 md:flex-row md:gap-x-6 lg:gap-x-7 xl:gap-x-8`}>
@@ -12,7 +16,7 @@ const ProductCartCard = ({cart}) => {
                     <div className={`w-full flex items-center justify-between mb-3 md:mb-[18px]`}>
                         <h1 className={`font-sora text-lg leading-[20px] font-semibold text-[#09080F] md:text-xl md:leading-[30px] lg:text-2xl`}>{cart.product_title}</h1>
                         <div className={`w-auto hidden sm:block`}>
-                            <button className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
+                            <button onClick={() => handleDeleteToCart(cart)} className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
                         </div>
                     </div>
                     <div className={`w-full mb-2 md:max-w-[850px] md:mb-3 lg:mb-4`}>
@@ -21,7 +25,7 @@ const ProductCartCard = ({cart}) => {
                     <div className={`w-full flex items-center justify-between`}>
                         <p className={`font-sora text-base leading-[30px] font-medium text-[#09080FCC] md:text-lg lg:text-xl`}>Price: ${cart.price}</p>
                         <div className={`w-auto sm:hidden`}>
-                            <button className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
+                            <button onClick={() => handleDeleteToCart(cart)} className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
                         </div>
                     </div>
                 </div>
