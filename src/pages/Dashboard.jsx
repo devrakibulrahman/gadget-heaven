@@ -77,7 +77,7 @@ const Dashboard = () => {
                                                 </button>
                                             </div>
                                             <div className={`w-auto`}>
-                                                <button onClick={() => deleteDataToClickPurchase(saveCartData)} disabled={saveCartData.length === true ? true : false} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
+                                                <button onClick={() => deleteDataToClickPurchase(saveCartData)} disabled={saveCartData.length ? false : true} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
                                                     <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/5'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
                                                         <span className={`font-sora text-sm leading-[26px] font-normal text-white md:text-base lg:text-lg`}>Purchase</span>
                                                     </div>
