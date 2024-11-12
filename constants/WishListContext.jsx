@@ -9,7 +9,6 @@ const WishListContext = createContext();
 const WishListProvider = ({children}) => {
     const [productWishList, setProductWishList] = useState([]);
     const [saveWishListData, setWishListData] = useState([]);
-    // console.log(productWishList);
 
     const handleDeleteDataToWishlist = (data) => {
         const removeData = saveWishListData.filter((remData) => remData.product_id !== data.product_id);

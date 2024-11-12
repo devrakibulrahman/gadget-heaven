@@ -36,7 +36,6 @@ const CartProvider = ({children}) => {
 
     const deleteDataToClickPurchase = (purchase) => {
         const filterPurchaseData = saveCartData.filter((purchaseData) => purchaseData.product_id === purchase.product_id);
-        console.log(filterPurchaseData);
         setSaveCartData(filterPurchaseData);
         setDataToCartLocalStore(filterPurchaseData);
     };

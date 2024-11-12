@@ -17,10 +17,10 @@ const ProductDetailsCard = ({idFromURL}) => {
     const {saveCartData} = useContext(CartContext);
     const {productWishList, setProductWishList} = useContext(WishListContext);
     const {saveWishListData} = useContext(WishListContext);
-    // const {purchaseDisable, setPurchaseDisable} = useContext(CartContext);
-
+    
     // find the data and show data in display --------------------->
     const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
+    const findProductId = saveWishListData.find((productId) => productId.product_id === idFromURL.product_id);
 
     // destructure the props -------------------------------------->
     const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
@@ -28,7 +28,7 @@ const ProductDetailsCard = ({idFromURL}) => {
     const saveWishlistDataIds = saveWishListData.map((ids) => ids.product_id);
 
     const handleCart = (cartId, saveCartDataIds) => {
-        
+
         if(saveCartDataIds.includes(cartId.product_id)){
             toast.warn('Already Add To Cart !!', {
                 position: "top-center",
@@ -39,7 +39,7 @@ const ProductDetailsCard = ({idFromURL}) => {
                 draggable: false,
                 progress: undefined,
                 theme: "light",
-                });
+            });
             return;
         };
 
@@ -54,10 +54,11 @@ const ProductDetailsCard = ({idFromURL}) => {
                 progress: undefined,
                 theme: "light",
             });
+            
             const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
             addDataToLocalStore(cartId);
-            // setPurchaseDisable(!purchaseDisable);
+            return;
         };
     };
 
@@ -145,7 +146,7 @@ const ProductDetailsCard = ({idFromURL}) => {
                         </div>
                         <div className={`w-full flex items-center gap-x-3 mt-3 md:gap-x-4 md:mt-4`}>
                             <div className={`w-auto`}>
-                                <button onClick={() => handleCart(idFromURL, saveCartDataIds)} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
+                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, findProductDetails)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
                                     <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
                                     <div className={`w-auto`}>
                                         <RiShoppingCartLine color={`#fff`} size={22}/>
@@ -153,8 +154,8 @@ const ProductDetailsCard = ({idFromURL}) => {
                                 </button>
                             </div>
                             <div className={`w-auto`}>
-                                <button onClick={() => handleWishlist(idFromURL, saveWishlistDataIds)} className={`w-[48px] h-[48px] bg-white border border-[#09080F0D] flex items-center justify-center rounded-full transition ease-in-out duration-300 hover:bg-[#9538E2] hover:border-[#9538E2] group`}>
-                                    <i className="ri-heart-line text-[22px] group-hover:text-white"></i>
+                                <button onClick={() => handleWishlist(idFromURL, saveWishlistDataIds)} disabled={findProductId ? true : false} className={`w-[48px] h-[48px] ${findProductId ? 'bg-[#9538E2] border-[#9538E2] text-black/50' : 'bg-white hover:bg-[#9538E2] hover:border-[#9538E2] group'} border border-[#09080F0D] flex items-center justify-center rounded-full transition ease-in-out duration-300`}>
+                                    <i className={`ri-heart-line text-[22px] ${findProductId ? 'text-white' : 'text-[#09080FCC]]'} group-hover:text-white`}></i>
                                 </button>
                             </div>
                         </div>
