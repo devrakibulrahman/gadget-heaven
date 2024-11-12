@@ -68,7 +68,7 @@ const Dashboard = () => {
                                         <div className={`w-full flex items-center justify-center gap-x-3 md:gap-x-4`}>
                                             <div className={`w-auto`}>
                                                 <button onClick={() => sortByDescendingPrice()} className={`radial-btn w-[160px] h-[48px] rounded-full flex items-center justify-center p-[2px] transition ease-in-out duration-300 group md:w-[175px] md:h-[50px] lg:w-[190px] lg:h-[52px]`}>
-                                                    <div className={`btn-bg flex items-center justify-center gap-x-2 bg-white w-full h-full rounded-full btn-bg-transition`}>
+                                                    <div className={`btn-bg flex items-center justify-center gap-x-2 w-full h-full rounded-full btn-bg-transition`}>
                                                         <span  className={`font-sora text-sm leading-[26px] font-semibold md:text-base lg:text-lg`}>Sort by Price</span>
                                                         <div className={`w-auto`}>
                                                             <HiOutlineAdjustments size={20}/>
@@ -78,8 +78,8 @@ const Dashboard = () => {
                                             </div>
                                             <div className={`w-auto`}>
                                                 <button onClick={() => deleteDataToClickPurchase(saveCartData)} disabled={saveCartData.length ? false : true} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
-                                                    <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/5'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
-                                                        <span className={`font-sora text-sm leading-[26px] font-normal ${saveCartData.length ? 'text-white' : 'text-black/20'} md:text-base lg:text-lg`}>Purchase</span>
+                                                    <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/15'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
+                                                        <span className={`font-sora text-sm leading-[26px] font-normal ${saveCartData.length ? 'text-white' : 'text-black/30'} md:text-base lg:text-lg`}>Purchase</span>
                                                     </div>
                                                 </button>
                                             </div>
