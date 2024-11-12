@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { getDataFromCartToLocalStore, deleteDataFromLocalStore } from "../src/utilities/LocalStore";
+import { getDataFromCartToLocalStore, deleteDataFromLocalStore, setDataToCartLocalStore } from "../src/utilities/LocalStore";
 import { toast } from "react-toastify";
 
 const CartContext = createContext();
@@ -8,7 +8,6 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     const [productCart, setProductCart] = useState([]);
     const [saveCartData, setSaveCartData] = useState([]);
-    console.log(saveCartData)
 
     const handleDeleteToCart = (data) => {
         const removeData = saveCartData.filter((remData) => remData.product_id !== data.product_id);
@@ -33,7 +32,14 @@ const CartProvider = ({children}) => {
         const descendingPrice = saveCartData.filter((items) => sortDescendingOrder.includes(items.price));
               descendingPrice.sort((a, b) => b.price - a.price);
         setSaveCartData(descendingPrice);
-    }; 
+    };
+
+    const deleteDataToClickPurchase = (purchase) => {
+        const filterPurchaseData = saveCartData.filter((purchaseData) => purchaseData.product_id === purchase.product_id);
+        console.log(filterPurchaseData);
+        setSaveCartData(filterPurchaseData);
+        setDataToCartLocalStore(filterPurchaseData);
+    };
 
     useEffect(() => {
         fetch('/allProductApi.json')
@@ -59,7 +65,7 @@ const CartProvider = ({children}) => {
     }, [productCart])
 
     return(
-        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice}}>
+        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice, deleteDataToClickPurchase}}>
             {children}
         </CartContext.Provider>
     );

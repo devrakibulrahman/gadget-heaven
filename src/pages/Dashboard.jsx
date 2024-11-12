@@ -11,6 +11,7 @@ const Dashboard = () => {
     const [cartTabActive, setCartTabActive] = useState(true);
     const [wishListActive, setWishListActive] = useState(false);
     const {saveCartData, sortByDescendingPrice} = useContext(CartContext);
+    const {deleteDataToClickPurchase} = useContext(CartContext);
 
     // tab button event handle --------------------->
     const handleCartTab = (str) => {
@@ -70,15 +71,15 @@ const Dashboard = () => {
                                                     <div className={`btn-bg flex items-center justify-center gap-x-2 bg-white w-full h-full rounded-full btn-bg-transition`}>
                                                         <span  className={`font-sora text-sm leading-[26px] font-semibold md:text-base lg:text-lg`}>Sort by Price</span>
                                                         <div className={`w-auto`}>
-                                                            <HiOutlineAdjustments/>
+                                                            <HiOutlineAdjustments size={20}/>
                                                         </div>
                                                     </div>
                                                 </button>
                                             </div>
                                             <div className={`w-auto`}>
-                                                <button className={`radial-btn w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
-                                                    <div className={`btn-bg-primary flex items-center justify-center bg-white w-full h-full rounded-full`}>
-                                                        <span  className={`font-sora text-sm leading-[26px] font-normal text-white md:text-base lg:text-lg`}>Purchase</span>
+                                                <button onClick={() => deleteDataToClickPurchase(saveCartData)} disabled={saveCartData.length === true ? true : false} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
+                                                    <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/5'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
+                                                        <span className={`font-sora text-sm leading-[26px] font-normal text-white md:text-base lg:text-lg`}>Purchase</span>
                                                     </div>
                                                 </button>
                                             </div>

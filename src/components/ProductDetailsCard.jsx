@@ -15,9 +15,9 @@ const ProductDetailsCard = ({idFromURL}) => {
     const data = useLoaderData();
     const {productCart, setProductCart} = useContext(CartContext);
     const {saveCartData} = useContext(CartContext);
-    const {productWishList, setProductWishList} = useContext(WishListContext)
+    const {productWishList, setProductWishList} = useContext(WishListContext);
     const {saveWishListData} = useContext(WishListContext);
-
+    // const {purchaseDisable, setPurchaseDisable} = useContext(CartContext);
 
     // find the data and show data in display --------------------->
     const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
@@ -57,10 +57,9 @@ const ProductDetailsCard = ({idFromURL}) => {
             const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
             addDataToLocalStore(cartId);
+            // setPurchaseDisable(!purchaseDisable);
         };
     };
-
-
 
     const handleWishlist = (wishlistId, saveWishlistDataIds) => {
         if(saveWishlistDataIds.includes(wishlistId.product_id)){

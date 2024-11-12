@@ -29,6 +29,12 @@ const WishListProvider = ({children}) => {
         deleteDataFromWishlist(data);
     };
 
+    const handleAddToCartFromWishlist = (data) => {
+        const removeData = saveWishListData.filter((remData) => remData.product_id !== data.product_id);
+        setWishListData(removeData);
+        deleteDataFromWishlist(data);
+    };
+
     useEffect(() => {
         fetch('/allProductApi.json')
             .then((res) => res.json())
@@ -53,7 +59,7 @@ const WishListProvider = ({children}) => {
     }, [productWishList]);
 
     return(
-        <WishListContext.Provider value={{saveWishListData, productWishList, setProductWishList, handleDeleteDataToWishlist}}>
+        <WishListContext.Provider value={{saveWishListData, productWishList, setProductWishList, handleDeleteDataToWishlist, handleAddToCartFromWishlist}}>
             {children}
         </WishListContext.Provider>
     );

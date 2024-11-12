@@ -58,4 +58,9 @@ const addDataToWishlistLocalStore = (productId) => {
     setDataToWishlistLocalStore(dataFromLocalStore);
 };
 
-export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore, getDataFromWishlistToLocalStore, setDataToWishlistLocalStore, addDataToWishlistLocalStore, deleteDataFromWishlist };
+// delete cart data when click purchase cart product --------------------------->
+const deleteCartDataClickPurchase = () => {
+    
+};
+
+export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore, getDataFromWishlistToLocalStore, setDataToWishlistLocalStore, addDataToWishlistLocalStore, deleteDataFromWishlist, deleteCartDataClickPurchase };
