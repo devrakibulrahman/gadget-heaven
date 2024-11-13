@@ -12,10 +12,15 @@ import Iphone from "../components/categoriesComponents/Iphone";
 const Home = () => {
     // get data from context api ------------------------------>
     const cateNavigate = useNavigate();
+    const shopNowNavigate = useNavigate();
     const pageLocation = useLocation();
 
     const handleCateNavigate = (cate) => {
         cateNavigate(`${cate}`);
+    };
+
+    const handleShopNow = () => {
+        shopNowNavigate('/shop now');
     };
 
     return (
@@ -33,7 +38,7 @@ const Home = () => {
                                         <p className={`font-sora text-sm leading-[26px] font-normal text-[#FFFFFF] md:text-base`}>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                                     </div>
                                     <div className={`w-full mt-3 md:mt-4 lg:mt-6`}>
-                                        <button className={`font-sora text-base leading-[26px] font-bold text-[#9538E2] w-[145px] h-[52px] bg-white rounded-full md:text-lg lg:text-xl md:w-[155px] md:h-[56px] lg:w-[160px] xl:w-[168px]`}>Shop Now</button>
+                                        <button onClick={handleShopNow} className={`font-sora text-base leading-[26px] font-bold text-[#9538E2] w-[145px] h-[52px] bg-white rounded-full md:text-lg lg:text-xl md:w-[155px] md:h-[56px] lg:w-[160px] xl:w-[168px]`}>Shop Now</button>
                                     </div>
                                 </div>
                                 <div className={`w-full relative min-h-[200px] flex items-center justify-center xl:min-h-[200px]`}>

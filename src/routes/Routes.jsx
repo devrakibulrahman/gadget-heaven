@@ -11,6 +11,7 @@ import Accessories from "../components/categoriesComponents/Accessories";
 import SmartWatch from "../components/categoriesComponents/SmartWatch";
 import Macbook from "../components/categoriesComponents/Macbook";
 import Iphone from "../components/categoriesComponents/Iphone";
+import ShopNow from "../pages/ShopNow";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
                         element: <Iphone></Iphone>
                     }
                 ],
+            },
+            {
+                path: '/shop now',
+                element: <ShopNow></ShopNow>
             },
             {
                 path: '/statistics',
