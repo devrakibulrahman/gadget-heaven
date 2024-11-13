@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { getDataFromCartToLocalStore, deleteDataFromLocalStore, setDataToCartLocalStore } from "../src/utilities/LocalStore";
+import { getDataFromCartToLocalStore, deleteDataFromLocalStore, setDataToCartLocalStore, addTotalPriceToSetItem } from "../src/utilities/LocalStore";
 import { toast } from "react-toastify";
 
 const CartContext = createContext();
@@ -39,6 +39,10 @@ const CartProvider = ({children}) => {
         setSaveCartData(filterPurchaseData);
         setDataToCartLocalStore(filterPurchaseData);
     };
+    
+    const handleAddPrice = (price) => {
+        addTotalPriceToSetItem(price);
+    };
 
     useEffect(() => {
         fetch('/allProductApi.json')
@@ -64,7 +68,7 @@ const CartProvider = ({children}) => {
     }, [productCart])
 
     return(
-        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice, deleteDataToClickPurchase}}>
+        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice, deleteDataToClickPurchase, handleAddPrice }}>
             {children}
         </CartContext.Provider>
     );

@@ -7,13 +7,11 @@ import ProductCart from "../components/ProductCart";
 import ProductWishList from "../components/ProductWishList";
 
 const Dashboard = () => {
-    // state declare here -------------------------->
     const [cartTabActive, setCartTabActive] = useState(true);
     const [wishListActive, setWishListActive] = useState(false);
     const {saveCartData, sortByDescendingPrice} = useContext(CartContext);
-    const {deleteDataToClickPurchase} = useContext(CartContext);
+    const {deleteDataToClickPurchase, handleAddPrice} = useContext(CartContext);
 
-    // tab button event handle --------------------->
     const handleCartTab = (str) => {
         if(str === 'cart'){
             setCartTabActive(true);
@@ -77,8 +75,8 @@ const Dashboard = () => {
                                                 </button>
                                             </div>
                                             <div className={`w-auto`}>
-                                                <button onClick={() => deleteDataToClickPurchase(saveCartData)} disabled={saveCartData.length ? false : true} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
-                                                    <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/15'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
+                                                <button onClick={() => {deleteDataToClickPurchase(saveCartData), document.getElementById('my_modal_4').showModal()}} disabled={saveCartData.length ? false : true} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
+                                                    <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/30'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
                                                         <span className={`font-sora text-sm leading-[26px] font-normal ${saveCartData.length ? 'text-white' : 'text-black/30'} md:text-base lg:text-lg`}>Purchase</span>
                                                     </div>
                                                 </button>

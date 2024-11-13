@@ -3,22 +3,21 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../constants/CartContext';
 import { WishListContext } from '../../constants/WishListContext';
+import { PriceContext } from '../../constants/PriceContext';
 
 
 const Navbar = () => {
     // all hooks declaration ----------------------------------->
     const [isNavActive, setIsNavActive] = useState(false);
     const location = useLocation();
+    const {handleGenerateRandomNum} = useContext(PriceContext);
 
     const {saveCartData} = useContext(CartContext);
     const {saveWishListData} = useContext(WishListContext);
-    // console.log(saveCartData);
-    // console.log(saveWishListData);
 
-    // all destructure array and object ------------------------>
     const {pathname} = location;
 
-    // all function declaration -------------------------------->
+
     const handleNavActive = () => {
         setIsNavActive(!isNavActive)
     };
@@ -35,9 +34,9 @@ const Navbar = () => {
                             <div className={`w-auto hidden md:block`}>
                                 <nav className={`w-auto`}>
                                     <ul className={`w-auto flex items-center justify-center gap-x-5 md:gap-x-[35px] lg:gap-x-[48px]`}>
-                                        <NavLink to='/' className={`font-sora text-base leading-5 ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
+                                        <NavLink to='/'  className={`font-sora text-base leading-5 ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
                                         <NavLink to='/statistics' className={`font-sora text-base leading-5 ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Statistics</NavLink>
-                                        <NavLink to='/dashboard' className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
+                                        <NavLink to='/dashboard' onClick={handleGenerateRandomNum} className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
                                     </ul>
                                 </nav>
                             </div>

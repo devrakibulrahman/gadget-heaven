@@ -4,30 +4,29 @@ import PropTypes from 'prop-types';
 import { BiSolidStar, BiSolidStarHalf, BiStar } from "react-icons/bi";
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { useLoaderData } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../constants/CartContext';
 import { addDataToLocalStore, addDataToWishlistLocalStore } from '../utilities/LocalStore';
 import { toast } from 'react-toastify';
 import { WishListContext } from '../../constants/WishListContext';
 
 const ProductDetailsCard = ({idFromURL}) => {
-    // get data from api ------------------------------------------>
     const data = useLoaderData();
     const {productCart, setProductCart} = useContext(CartContext);
     const {saveCartData} = useContext(CartContext);
     const {productWishList, setProductWishList} = useContext(WishListContext);
     const {saveWishListData} = useContext(WishListContext);
-    
-    // find the data and show data in display --------------------->
+    const {handleAddPrice} = useContext(CartContext);
+
     const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
     const findProductId = saveWishListData.find((productId) => productId.product_id === idFromURL.product_id);
 
-    // destructure the props -------------------------------------->
-    const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
     const saveCartDataIds = saveCartData.map((ids) => ids.product_id);
     const saveWishlistDataIds = saveWishListData.map((ids) => ids.product_id);
 
-    const handleCart = (cartId, saveCartDataIds) => {
+    const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
+
+    const handleCart = (cartId, saveCartDataIds, data) => {
 
         if(saveCartDataIds.includes(cartId.product_id)){
             toast.warn('Already Add To Cart !!', {
@@ -57,8 +56,7 @@ const ProductDetailsCard = ({idFromURL}) => {
             
             const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
-            addDataToLocalStore(cartId);
-            return;
+            addDataToLocalStore(cartId);           
         };
     };
 
@@ -88,9 +86,11 @@ const ProductDetailsCard = ({idFromURL}) => {
                 progress: undefined,
                 theme: "light",
             });
+
             const newWishlistData = [...productWishList, wishlistId];
             setProductWishList(newWishlistData);
             addDataToWishlistLocalStore(wishlistId);
+
         };
     };
 
@@ -146,7 +146,7 @@ const ProductDetailsCard = ({idFromURL}) => {
                         </div>
                         <div className={`w-full flex items-center gap-x-3 mt-3 md:gap-x-4 md:mt-4`}>
                             <div className={`w-auto`}>
-                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, findProductDetails)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
+                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, saveCartData), handleAddPrice(price)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
                                     <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
                                     <div className={`w-auto`}>
                                         <RiShoppingCartLine color={`#fff`} size={22}/>
