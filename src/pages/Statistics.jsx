@@ -20,7 +20,6 @@ const Statistics = () => {
                 <div className={`w-full h-[450px] bg-white mt-[32px] pt-[30px] pl-[0px] pr-[10px] rounded-[16px] mb-[50px] md:mb-[100px] md:pl-[20px] md:pr-[20px]`}>
                     <BarChartDesign/>
                 </div>
-                {/* <Rakibul></Rakibul> */}
             </div>
         </div>
     );

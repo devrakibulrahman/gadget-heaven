@@ -3,19 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const ProductItems = ({product}) => {
-    // product object destructure ----------------------------->
     const {product_id, product_title, product_image, price} = product;
     
-    // state and hooks declare here --------------------------->
     const pageNavigate = useNavigate();
 
-    // event handle declare here ------------------------------>
     const handlePageNavigate = (productId) => {
         pageNavigate(`/product details/${productId}`);
     };
 
     return (
-        <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-full md:p-6 xl:min-h-[500px] flex flex-col`}>
+        <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-full md:p-6 lg:min-h-[500px] xl:min-h-[500px] flex flex-col`}>
             <div className={`w-auto flex-grow`}>
                 <div className={`w-full h-[240px] bg-[#D9D9D9] rounded-xl overflow-hidden xl:h-[200px] 2xl:h-[240px]`}>
                     <img src={product_image} alt="product image" className={`w-full h-full object-cover`}/>
