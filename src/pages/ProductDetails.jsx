@@ -1,5 +1,6 @@
 import ProductDetailsCard from '../components/ProductDetailsCard';
 import PageHeading from '../components/PageHeading';
+import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
 import { ScrollRestoration, useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
@@ -8,6 +9,7 @@ const ProductDetails = () => {
 
     return (
         <>
+            <DynamicTitle title={'Product Details'}/>
             <ScrollRestoration></ScrollRestoration>
             <div className={`w-full`}>
                 <div className={`w-full mb-[680px] sm:mb-[555px] md:mb-[900px] lg:mb-[480px]`}>
