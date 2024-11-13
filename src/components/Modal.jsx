@@ -16,7 +16,7 @@ const Modal = () => {
     return (
         <>
             <dialog id="my_modal_4" className="modal">
-            <div className={`w-[250px] min-h-[330px] bg-white rounded-2xl p-[30px] text-center sm:w-[450px]`}>
+            <div className={`w-[350px] min-h-[330px] bg-white rounded-2xl p-[25px] md:p-[30px] text-center sm:w-[450px]`}>
                 <div className={`w-full flex items-center justify-center`}>
                     <img src='../src/assets/congrates.png' alt="congrates image" />
                 </div>
@@ -30,7 +30,7 @@ const Modal = () => {
                 </div>
                 <div className="modal-action">
                 <form method="dialog" className={`w-full flex items-center justify-center`}>
-                    <button onClick={handleBackToHome} className={` w-full h-[38px] bg-[#11000008] rounded-full font-sora text-base leading-5 font-semibold text-[#09080F]`}>Close</button>
+                    <button onClick={handleBackToHome} className={` w-full h-[50px] bg-[#11000008] rounded-full font-sora text-base leading-5 font-semibold text-[#09080F]`}>Close</button>
                 </form>
                 </div>
             </div>

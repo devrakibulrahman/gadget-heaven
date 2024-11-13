@@ -23,7 +23,7 @@ const Home = () => {
             <div className={`w-full`}>
                 <div className={`w-full px-4`}>
                     <div className={`w-full pl-[6px] pr-[6px] pb-[6px] border-l border-r border-b border-[#e2e2e2] rounded-bl-xl rounded-br-xl md:rounded-bl-2xl md:rounded-br-2xl lg:rounded-bl-3xl lg:rounded-br-3xl`}>
-                        <div className={`w-full min-h-[200px] pb-[30px] bg-[#9538E2] rounded-bl-xl rounded-br-xl md:rounded-bl-2xl md:rounded-br-2xl lg:rounded-bl-3xl lg:rounded-br-3xl xl:min-h-[300px]`}>
+                        <div className={`w-full min-h-[200px] pb-[20px] bg-[#9538E2] rounded-bl-xl rounded-br-xl sm:pb-[30px] md:rounded-bl-2xl md:rounded-br-2xl lg:rounded-bl-3xl lg:rounded-br-3xl xl:min-h-[300px]`}>
                             <div className={`container mx-auto px-4`}>
                                 <div className={`w-full flex flex-col items-center justify-center text-center mb-7 lg:mb-[50px] xl:mb-[60px]`}>
                                     <div className={`w-full max-w-[1110px] mb-3 md:mb-4 lg:mb-6`}>
