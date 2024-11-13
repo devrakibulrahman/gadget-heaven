@@ -7,7 +7,7 @@ import ProductItems from '../ProductItems';
 const Laptops = () => {
     const data = useContext(LoadApiData);
     const categoryFromURL = useLocation();
-    const filterLaptops = data.filter((laptops) => laptops.category.includes(categoryFromURL.pathname.split('/')[1]));
+    const filterLaptops = data.filter((laptops) => laptops.category.includes(categoryFromURL.pathname.split('/')[2]));
 
     return (
         <div className={`w-full grid-bx`}>

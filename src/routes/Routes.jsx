@@ -28,39 +28,55 @@ const router = createBrowserRouter([
                     },
                     {
                         path: '/:laptops',
-                        // loader: () => fetch('/allProduct.json'),
                         element: <Laptops></Laptops>
                     },
                     {
                         path: '/:phones',
-                        // loader: () => fetch('/allProduct.json'),
                         element: <Phone></Phone>
                     },
                     {
                         path: '/:accessories',
-                        // loader: () => fetch('/allProduct.json'),
                         element: <Accessories></Accessories>
                     },
                     {
                         path: '/:smartwatch',
-                        // loader: () => fetch('/allProduct.json'),
                         element: <SmartWatch></SmartWatch>
                     },
                     {
                         path: '/:macbook',
-                        // loader: () => fetch('/allProduct.json'),
                         element: <Macbook></Macbook>
                     },
                     {
                         path: '/:iphone',
-                        // loader: () => fetch('/allProduct.json'),
                         element: <Iphone></Iphone>
                     }
                 ],
             },
             {
                 path: '/shop now',
-                element: <ShopNow></ShopNow>
+                element: <ShopNow></ShopNow>,
+                children: [
+                    {
+                        path: '/shop now',
+                        element: <AllProducts></AllProducts>
+                    },
+                    {
+                        path: '/shop now/laptops',
+                        element: <Laptops></Laptops>
+                    },
+                    {
+                        path: '/shop now/smartPhones',
+                        element: <Phone></Phone>
+                    },
+                    {
+                        path: '/shop now/smartWatches',
+                        element: <SmartWatch></SmartWatch>
+                    },
+                    {
+                        path: '/shop now/accessories',
+                        element: <Accessories></Accessories>
+                    },
+                ],
             },
             {
                 path: '/statistics',

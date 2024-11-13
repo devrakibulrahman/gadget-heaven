@@ -35,7 +35,7 @@ const Dashboard = () => {
             <div className={`w-full min-h-[50px] bg-[#9538E2] py-8`}>
                 <div className={'container mx-auto px-4'}>
                     <div className={`w-full`}>
-                        <PageHeading title={`Dashboard`} para={`Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!`}></PageHeading>
+                        <PageHeading title={`Dashboard`} para={`Welcome to your dashboard! Manage your Cart for ready-to-buy items and your Wishlist for saved favorites. Enjoy easy shopping control!`}></PageHeading>
                     </div>
                     <div className={`w-full flex items-center justify-center gap-x-3 mt-4 md:gap-x-4 md:mt-6 lg:gap-x-5 lg:mt-7 xl:gap-x-6 xl:mt-8`}>
                         <div className={`w-auto`}>

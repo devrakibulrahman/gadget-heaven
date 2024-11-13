@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from "react";
-import { getDataFromCartToLocalStore, getTotalPriceDataFromLocalStore } from "../src/utilities/LocalStore";
+import { getTotalPriceDataFromLocalStore } from "../src/utilities/LocalStore";
 
 const PriceContext = createContext();
 

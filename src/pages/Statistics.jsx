@@ -1,4 +1,3 @@
-import Rakibul from "@/components/AreaChart";
 import PageHeading from "../components/PageHeading"
 import BarChartDesign from "@/components/Chart";
 
@@ -9,7 +8,7 @@ const Statistics = () => {
             <div className={`w-full min-h-[50px] bg-[#9538E2] py-8`}>
                 <div className={`container mx-auto px-4`}>
                     <div className={`w-full`}>
-                        <PageHeading title={`Statistics`} para={`Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!`}></PageHeading>
+                        <PageHeading title={`Statistics`} para={`View key product statistics, including ratings, prices, and top sellers, to help you make informed shopping choices.`}></PageHeading>
                     </div>
                 </div>
             </div>

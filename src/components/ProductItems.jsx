@@ -12,9 +12,9 @@ const ProductItems = ({product}) => {
     };
 
     return (
-        <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-full md:p-6 lg:min-h-[500px] xl:min-h-[500px] flex flex-col`}>
+        <div className={`w-full max-w-[400px] min-h-[380px] bg-white p-5 rounded-2xl sm:max-w-[450px] md:p-6 lg:min-h-[500px] xl:min-h-[500px] flex flex-col`}>
             <div className={`w-auto flex-grow`}>
-                <div className={`w-full h-[240px] bg-[#D9D9D9] rounded-xl overflow-hidden xl:h-[200px] 2xl:h-[240px]`}>
+                <div className={`w-full h-[240px] bg-[#D9D9D9] rounded-xl overflow-hidden sm:h-[300px] xl:h-[200px] 2xl:h-[240px]`}>
                     <img src={product_image} alt="product image" className={`w-full h-full object-cover`}/>
                 </div>
                 <div className={`w-full mt-6 flex flex-col justify-start gap-y-1 md:gap-y-2 lg:gap-y-3`}>

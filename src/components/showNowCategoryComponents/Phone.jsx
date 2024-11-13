@@ -4,18 +4,18 @@ import { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import ProductItems from '../ProductItems';
 
-const Laptops = () => {
+const Phone = () => {
     const data = useContext(LoadApiData);
+
     const categoryFromURL = useLocation();
-    const filterLaptops = data.filter((laptops) => laptops.category.includes(categoryFromURL.pathname.split('/')[1]));
+
+    const filterPhone = data.filter((phone) => phone.category.includes(categoryFromURL.pathname.split('smart')[1]));
 
     return (
         <div className={`w-full grid-bx`}>
-            {
-                filterLaptops.map((products) => <ProductItems key={products.product_id} product={products}/>)
-            }
+            {filterPhone.map((products) => <ProductItems key={products.product_id} product={products}/>)}
         </div>
     );
 };
 
-export default Laptops;
+export default Phone;

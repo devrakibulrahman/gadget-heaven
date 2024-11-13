@@ -10,7 +10,6 @@ import Macbook from "../components/categoriesComponents/Macbook";
 import Iphone from "../components/categoriesComponents/Iphone";
 
 const Home = () => {
-    // get data from context api ------------------------------>
     const cateNavigate = useNavigate();
     const shopNowNavigate = useNavigate();
     const pageLocation = useLocation();
