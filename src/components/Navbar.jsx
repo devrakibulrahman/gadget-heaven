@@ -61,7 +61,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={`fixed z-20 top-0 ${isNavActive ? 'right-0 duration-300 ease-in' : 'right-[-100%] duration-300 ease-out'} w-full h-screen bg-white/80 backdrop-blur-xl md:hidden`}>
+                    <div className={`fixed z-50 top-0 ${isNavActive ? 'right-0 duration-300 ease-in' : 'right-[-100%] duration-300 ease-out'} w-full h-screen bg-white/80 backdrop-blur-xl md:hidden`}>
                         <div className={`w-[30px] h-[30px] bg-[#9538E2] flex items-center justify-center mt-7 ml-7 cursor-pointer`} onClick={handleNavActive}>
                             <i className={`ri-close-large-fill text-xl text-white`}></i>
                         </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                                 <ul className={`w-full flex justify-center flex-col`}>
                                     <NavLink to='/' className={`font-sora text-base leading-[26px] ${pathname === '/' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Home</NavLink>
                                     <NavLink to='/statistics' className={`font-sora text-base leading-[26px] ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Statistics</NavLink>
-                                    <NavLink to='/dashboard' className={`font-sora text-base leading-[26px] ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Dashboard</NavLink>
+                                    <NavLink to='/dashboard' onClick={handleGenerateRandomNum} className={`font-sora text-base leading-[26px] ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Dashboard</NavLink>
                                     <NavLink to='/cart list' className={`font-sora text-base leading-[26px] ${pathname === '/cart list' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Cart List</NavLink>
                                     <NavLink to='/wish list' className={`font-sora text-base leading-[26px] ${pathname === '/wish list' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Wishlist</NavLink>
                                 </ul>
