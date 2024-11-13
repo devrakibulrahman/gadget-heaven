@@ -18,7 +18,7 @@ const Modal = () => {
             <dialog id="my_modal_4" className="modal">
             <div className={`w-[250px] min-h-[330px] bg-white rounded-2xl p-[30px] text-center sm:w-[450px]`}>
                 <div className={`w-full flex items-center justify-center`}>
-                    <img src={`/src/assets/img/congrates.png`} alt="congrates image" />
+                    <img src='../src/assets/congrates.png' alt="congrates image" />
                 </div>
                 <div className={`w-full mt-[26px]`}>
                     <h1 className={`font-sora text-xl leading-[30px] font-bold text-[#09080F]`}>Payment Successfully</h1>

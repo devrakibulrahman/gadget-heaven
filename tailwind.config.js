@@ -11,7 +11,8 @@ export default {
   			sora: ["Sora", "sans-serif"]
   		},
   		backgroundImage: {
-  			banner: 'url(./assets/img/banner.jpg)'
+  			banner: 'url(./assets/img/banner.jpg)',
+			congrates: 'url(./assets/congrates.png)',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

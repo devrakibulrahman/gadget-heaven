@@ -96,7 +96,7 @@ const ProductDetailsCard = ({idFromURL}) => {
 
     return (
         <>
-            <div className={`w-full min-h-[565px] bg-white p-4 rounded-xl md:p-5 lg:p-6 xl:p-7 2xl:p-8 md:rounded-2xl lg:rounded-3xl`}>
+            <div className={`w-full min-h-[565px] bg-white p-5 rounded-xl md:p-5 lg:p-6 xl:p-7 2xl:p-8 md:rounded-2xl lg:rounded-3xl`}>
                 <div className={`w-full flex justify-center flex-col gap-y-5 lg:flex-row lg:gap-x-8`}>
                     <div className={`w-auto min-h-[100px]`}>
                         <div className={`w-full h-[280px] bg-[#ECECEC] rounded-2xl overflow-hidden sm:h-[320px] md:h-[503px] lg:w-[400px] lg:h-full xl:w-[550px]`}>
