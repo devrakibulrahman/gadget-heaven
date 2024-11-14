@@ -20,12 +20,13 @@ const Home = () => {
     };
 
     const handleShopNow = () => {
-        shopNowNavigate('/shop now');
+        // shopNowNavigate('/shop now');
+        shopNowNavigate('/dashboard');
     };
 
     return (
         <>
-            <DynamicTitle title={'Home'}/>
+            <DynamicTitle title={'Gadgets'}/>
             <div className={`w-full`}>
                 <div className={`w-full px-4`}>
                     <div className={`w-full pl-[6px] pr-[6px] pb-[6px] border-l border-r border-b border-[#e2e2e2] rounded-bl-xl rounded-br-xl md:rounded-bl-2xl md:rounded-br-2xl lg:rounded-bl-3xl lg:rounded-br-3xl`}>

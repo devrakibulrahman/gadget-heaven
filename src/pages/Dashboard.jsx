@@ -5,27 +5,29 @@ import { CartContext } from '../../constants/CartContext';
 import PageHeading from "../components/PageHeading";
 import ProductCart from "../components/ProductCart";
 import ProductWishList from "../components/ProductWishList";
-import DynamicTitle from '@/components/DynamicTitleComponents/DynamicTitle';
+import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
+import { CartToWishlistSwitcher } from '/constants/CartAndWishlist';
 
 const Dashboard = () => {
-    const [cartTabActive, setCartTabActive] = useState(true);
-    const [wishListActive, setWishListActive] = useState(false);
+    // const [cartTabActive, setCartTabActive] = useState(true);
+    // const [wishListActive, setWishListActive] = useState(false);
     const {saveCartData, sortByDescendingPrice} = useContext(CartContext);
     const {deleteDataToClickPurchase, handleAddPrice} = useContext(CartContext);
+    const {handleTabBtn, cartTabActive, wishListActive} = useContext(CartToWishlistSwitcher);
 
-    const handleCartTab = (str) => {
-        if(str === 'cart'){
-            setCartTabActive(true);
-            setWishListActive(false);
-            return;
-        };
+    // const handleCartTab = (str) => {
+    //     if(str === 'cart'){
+    //         setCartTabActive(true);
+    //         setWishListActive(false);
+    //         return;
+    //     };
 
-        if(str === 'wishlist'){
-            setCartTabActive(false);
-            setWishListActive(true);
-            return;
-        };
-    };
+    //     if(str === 'wishlist'){
+    //         setCartTabActive(false);
+    //         setWishListActive(true);
+    //         return;
+    //     };
+    // };
 
     const productPrice = saveCartData.map((productPrice) => productPrice.price);
     const totalPrice = productPrice.reduce((total, curr) => total + curr, 0);
@@ -42,10 +44,10 @@ const Dashboard = () => {
                         </div>
                         <div className={`w-full flex items-center justify-center gap-x-3 mt-4 md:gap-x-4 md:mt-6 lg:gap-x-5 lg:mt-7 xl:gap-x-6 xl:mt-8`}>
                             <div className={`w-auto`}>
-                                <button onClick={() => handleCartTab('cart')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${cartTabActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} transition duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-[#9538E2] md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[155px] lg:h-[52px] xl:w-[160px] xl:h-[52px]`}>Cart</button>
+                                <button onClick={() => handleTabBtn('cart')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${cartTabActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} transition duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-[#9538E2] md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[155px] lg:h-[52px] xl:w-[160px] xl:h-[52px]`}>Cart</button>
                             </div>
                             <div className={`w-auto`}>
-                                <button onClick={() => handleCartTab('wishlist')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${wishListActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} transition duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-[#9538E2] md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[160px] lg:h-[52px] xl:w-[180px] xl:h-[52px]`}>Wishlist</button>
+                                <button onClick={() => handleTabBtn('wishlist')} className={`w-[140px] min-h-[45px] rounded-full border border-white font-sora text-base leading-[26px] ${wishListActive ? 'bg-white text-[#9538E2] font-bold' : 'bg-[#9538E2] text-white font-medium'} transition duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-[#9538E2] md:text-base lg:text-lg md:w-[150px] md:h-[48px] lg:w-[160px] lg:h-[52px] xl:w-[180px] xl:h-[52px]`}>Wishlist</button>
                             </div>
                         </div>
                     </div>

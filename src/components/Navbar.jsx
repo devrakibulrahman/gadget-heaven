@@ -4,6 +4,7 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../../constants/CartContext';
 import { WishListContext } from '../../constants/WishListContext';
 import { PriceContext } from '../../constants/PriceContext';
+import { CartToWishlistSwitcher } from '/constants/CartAndWishlist';
 
 
 const Navbar = () => {
@@ -11,12 +12,10 @@ const Navbar = () => {
     const [isNavActive, setIsNavActive] = useState(false);
     const location = useLocation();
     const {handleGenerateRandomNum} = useContext(PriceContext);
-
     const {saveCartData} = useContext(CartContext);
     const {saveWishListData} = useContext(WishListContext);
-
+    const {handleIconBtn, cartTabActive, wishListActive} = useContext(CartToWishlistSwitcher);
     const {pathname} = location;
-
 
     const handleNavActive = () => {
         setIsNavActive(!isNavActive);
@@ -42,13 +41,13 @@ const Navbar = () => {
                             </div>
                             <div className={`w-auto flex items-center justify-center gap-x-3`}>
                                 <div className={`w-auto flex items-center justify-center gap-x-3 md:gap-x-4`}>
-                                    <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
+                                    <div onClick={() => handleIconBtn('iconCart')} className={`cursor-pointer relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
                                         <i className={`ri-shopping-cart-line text-lg ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
                                         <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
                                             <span className={`font-sora text-[10px] font-medium ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>{saveCartData.length}</span>
                                         </div>
                                     </div>
-                                    <div className={`relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
+                                    <div onClick={() => handleIconBtn('iconWishlist')} className={`cursor-pointer relative w-[35px] h-[35px] flex items-center justify-center bg-white border border-[#0B0B0B1A] rounded-full md:w-[40px] md:h-[40px]`}>
                                         <i className={`ri-heart-line text-lg ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}></i>
                                         <div className={`absolute top-[-6px] right-[-2.5px] w-[17px] h-[17px] border ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'border-[#9538E2]' : 'border-[#0B0B0B1A]'} bg-white rounded-full flex items-center justify-center`}>
                                             <span className={`font-sora text-[10px] font-medium ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#9538E2]' : 'text-[#0B0B0B]'}`}>{saveWishListData.length}</span>

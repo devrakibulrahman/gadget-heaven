@@ -4,7 +4,6 @@ import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
 import { ScrollRestoration, useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
-    // get product id from url using useParams -------------------->
     const idFromURL = useParams();
 
     return (

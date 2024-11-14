@@ -11,7 +11,8 @@ import Accessories from "../components/categoriesComponents/Accessories";
 import SmartWatch from "../components/categoriesComponents/SmartWatch";
 import Macbook from "../components/categoriesComponents/Macbook";
 import Iphone from "../components/categoriesComponents/Iphone";
-import ShopNow from "../pages/ShopNow";
+// import ShopNow from "../pages/ShopNow";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -52,31 +53,35 @@ const router = createBrowserRouter([
                     }
                 ],
             },
+            // {
+            //     path: '/shop now',
+            //     element: <ShopNow></ShopNow>,
+            //     children: [
+            //         {
+            //             path: '/shop now',
+            //             element: <AllProducts></AllProducts>
+            //         },
+            //         {
+            //             path: '/shop now/laptops',
+            //             element: <Laptops></Laptops>
+            //         },
+            //         {
+            //             path: '/shop now/smartPhones',
+            //             element: <Phone></Phone>
+            //         },
+            //         {
+            //             path: '/shop now/smartWatches',
+            //             element: <SmartWatch></SmartWatch>
+            //         },
+            //         {
+            //             path: '/shop now/accessories',
+            //             element: <Accessories></Accessories>
+            //         },
+            //     ],
+            // },
             {
-                path: '/shop now',
-                element: <ShopNow></ShopNow>,
-                children: [
-                    {
-                        path: '/shop now',
-                        element: <AllProducts></AllProducts>
-                    },
-                    {
-                        path: '/shop now/laptops',
-                        element: <Laptops></Laptops>
-                    },
-                    {
-                        path: '/shop now/smartPhones',
-                        element: <Phone></Phone>
-                    },
-                    {
-                        path: '/shop now/smartWatches',
-                        element: <SmartWatch></SmartWatch>
-                    },
-                    {
-                        path: '/shop now/accessories',
-                        element: <Accessories></Accessories>
-                    },
-                ],
+                path: '/about us',
+                element: <AboutUs></AboutUs>
             },
             {
                 path: '/statistics',
