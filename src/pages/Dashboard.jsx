@@ -7,6 +7,7 @@ import ProductCart from "../components/ProductCart";
 import ProductWishList from "../components/ProductWishList";
 import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
 import { CartToWishlistSwitcher } from '/constants/CartAndWishlist';
+import { ScrollRestoration } from 'react-router-dom';
 
 const Dashboard = () => {
     // const [cartTabActive, setCartTabActive] = useState(true);
@@ -35,6 +36,7 @@ const Dashboard = () => {
 
     return (
         <>
+            <ScrollRestoration />
             <DynamicTitle title={'Dashboard'}/>
             <div className={`w-full`}>
                 <div className={`w-full min-h-[50px] bg-[#9538E2] py-8`}>

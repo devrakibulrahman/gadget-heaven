@@ -13,12 +13,12 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={`w-full border-b border-[#09080F1A] my-7 md:my-5 lg:my-[30px]`}></div>
-                    <div className={`w-full flex flex-wrap gap-x-[50px] gap-y-[30px] justify-start sm:text-center sm:justify-center sm:items-center md:gap-x-[100px] lg:gap-x-[165px]`}>
-                        <div className={`w-auto flex items-center gap-x-[50px] md:gap-x-[100px] lg:gap-x-[165px]`}>
+                    <div className={`w-full flex flex-wrap gap-x-[50px] gap-y-[30px] justify-start sm:text-center sm:justify-center md:gap-x-[100px] lg:gap-x-[165px]`}>
+                        <div className={`w-auto flex gap-x-[50px] md:gap-x-[100px] lg:gap-x-[165px]`}>
                             <div className={`w-auto`}>
                                 <h1 className={`font-sora text-base leading-[18px] font-bold text-[#09080F] md:text-lg md:leading-[23px]`}>Services</h1>
                                 <nav className={`w-auto mt-4`}>
-                                    <ul className={`w-auto flex flex-col justify-start gap-y-2 md:gap-y-3 lg:gap-y-4`}>
+                                    <ul className={`w-auto flex flex-col justify-start gap-y-1 md:gap-y-3 lg:gap-y-4`}>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Product Support</Link>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Order Tracking</Link>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Shipping & Delivery</Link>
@@ -29,10 +29,10 @@ const Footer = () => {
                             <div className={`w-auto`}>
                                 <h1 className={`font-sora text-base leading-[18px] font-bold text-[#09080F] md:text-lg md:leading-[23px]`}>Company</h1>
                                 <nav className={`w-auto mt-4`}>
-                                    <ul className={`w-auto flex flex-col justify-start gap-y-2 md:gap-y-3 lg:gap-y-4`}>
+                                    <ul className={`w-auto flex flex-col justify-start gap-y-1 md:gap-y-3 lg:gap-y-4`}>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>About Us</Link>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>America Branch</Link>
-                                        <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Korea Branch</Link>
+                                        <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Australia Branch</Link>
                                         <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>China Branch</Link>
                                     </ul>
                                 </nav>
@@ -41,7 +41,7 @@ const Footer = () => {
                         <div className={`w-auto`}>
                             <h1 className={`font-sora text-base leading-[18px] font-bold text-[#09080F] md:text-lg md:leading-[23px]`}>Legal</h1>
                             <nav className={`w-auto mt-4`}>
-                                <ul className={`w-auto flex flex-col justify-start gap-y-2 md:gap-y-3 lg:gap-y-4`}>
+                                <ul className={`w-auto flex flex-col justify-start gap-y-1 md:gap-y-3 lg:gap-y-4`}>
                                     <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Terms of Service</Link>
                                     <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Privacy Policy</Link>
                                     <Link className={`font-sora text-sm leading-[25px] font-normal text-[#09080F99] transition duration-300 ease-in-out hover:underline md:text-base md:leading-4`}>Cookie Policy</Link>

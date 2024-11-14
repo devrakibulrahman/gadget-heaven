@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/4P5QTxj/company-ceo.png",
+      "name": "Noah Williams",
+      "companyRole": "Company Founder And CEO"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/7Q22tM7/company-coo-america-branch.png",
+      "name": "Emily Johnson",
+      "companyRole": "America Branch - COO"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/jMKmjBF/company-coo-china-branch.png",
+      "name": "Mason Davis",
+      "companyRole": "China Branch - COO"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co.com/yXchpXt/company-coo-australia-branch.png",
+      "name": "Olivia Smith",
+      "companyRole": "Australia Branch - COO"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co.com/mDMr7w1/company-product-manager.png",
+      "name": "Lucas Brown",
+      "companyRole": "Product Manager"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co.com/NrD9mYg/company-shipping-manager.png",
+      "name": "Elijah Wilson",
+      "companyRole": "Shipping Manager"
+    }
+]  

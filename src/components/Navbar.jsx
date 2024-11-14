@@ -14,7 +14,7 @@ const Navbar = () => {
     const {handleGenerateRandomNum} = useContext(PriceContext);
     const {saveCartData} = useContext(CartContext);
     const {saveWishListData} = useContext(WishListContext);
-    const {handleIconBtn, cartTabActive, wishListActive} = useContext(CartToWishlistSwitcher);
+    const {handleIconBtn, handleTabBtn} = useContext(CartToWishlistSwitcher);
     const {pathname} = location;
 
     const handleNavActive = () => {
@@ -30,12 +30,13 @@ const Navbar = () => {
                             <div className={`w-auto`}>
                                 <NavLink to='/' className={`font-sora text-xl leading-[26px] font-bold ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-[#FFFFFF]' : 'text-[#0B0B0B]'} cursor-pointer`}>Gadget Heaven</NavLink>
                             </div>
-                            <div className={`w-auto hidden md:block`}>
+                            <div className={`w-auto hidden lg:block`}>
                                 <nav className={`w-auto`}>
                                     <ul className={`w-auto flex items-center justify-center gap-x-5 md:gap-x-[35px] lg:gap-x-[48px]`}>
-                                        <NavLink to='/'  className={`font-sora text-base leading-5 ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
-                                        <NavLink to='/statistics' className={`font-sora text-base leading-5 ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Statistics</NavLink>
-                                        <NavLink to='/dashboard' onClick={handleGenerateRandomNum} className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
+                                        <NavLink to='/' onClick={() => handleTabBtn('cart')} className={`font-sora text-base leading-5 ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-bold underline text-white' : 'font-normal text-[#0B0B0BB3]' }`}>Home</NavLink>
+                                        <NavLink to='/about us' className={`font-sora text-base leading-5 ${pathname === '/about%20us' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white transition ease-in-out duration-300 hover:underline' : 'text-[#0B0B0BB3]')}`}>About Us</NavLink>
+                                        <NavLink to='/statistics' className={`font-sora text-base leading-5 ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white transition ease-in-out duration-300 hover:underline' : 'text-[#0B0B0BB3]')}`}>Statistics</NavLink>
+                                        <NavLink to='/dashboard' onClick={handleGenerateRandomNum} className={`font-sora text-base leading-5 ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : ((pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'font-medium text-white transition ease-in-out duration-300 hover:underline' : 'text-[#0B0B0BB3]')}`}>Dashboard</NavLink>
                                     </ul>
                                 </nav>
                             </div>
@@ -54,22 +55,23 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={`w-auto md:hidden`} onClick={handleNavActive}>
+                                <div className={`w-auto lg:hidden`} onClick={handleNavActive}>
                                     <i className={`ri-menu-fill text-2xl ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-white' : 'text-[#0B0B0B]'} cursor-pointer`}></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className={`fixed z-50 top-0 ${isNavActive ? 'right-0 duration-300 ease-in' : 'right-[-100%] duration-300 ease-out'} w-full h-screen bg-white/80 backdrop-blur-xl md:hidden`}>
+                    <div className={`fixed z-50 top-0 ${isNavActive ? 'right-0 duration-500 ease-in' : 'right-[-100%] duration-500 ease-in'} w-full max-w-[500px] h-screen bg-white/80 backdrop-blur-xl lg:hidden`}>
                         <div className={`w-[30px] h-[30px] bg-[#9538E2] flex items-center justify-center mt-7 ml-7 cursor-pointer`} onClick={handleNavActive}>
                             <i className={`ri-close-large-fill text-xl text-white`}></i>
                         </div>
                         <div className={`w-full mt-[60px]`}>
                             <nav className={`w-full`}>
                                 <ul className={`w-full flex justify-center flex-col`}>
-                                    <NavLink to='/' onClick={handleNavActive} className={`font-sora text-base leading-[26px] ${pathname === '/' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Home</NavLink>
+                                    <NavLink to='/' onClick={() => {handleNavActive(), handleTabBtn('cart')}} className={`font-sora text-base leading-[26px] ${pathname === '/' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Home</NavLink>
                                     <NavLink to='/statistics' onClick={handleNavActive} className={`font-sora text-base leading-[26px] ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Statistics</NavLink>
                                     <NavLink to='/dashboard' onClick={() => {handleGenerateRandomNum(), handleNavActive()}} className={`font-sora text-base leading-[26px] ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Dashboard</NavLink>
+                                    <NavLink to='/about%20us' onClick={handleNavActive} className={`font-sora text-base leading-[26px] ${pathname === '/about%20us' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>About Us</NavLink>
                                 </ul>
                             </nav>
                         </div>

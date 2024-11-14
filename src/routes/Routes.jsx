@@ -81,6 +81,7 @@ const router = createBrowserRouter([
             // },
             {
                 path: '/about us',
+                loader: () => fetch('/CompanyApi.json'),
                 element: <AboutUs></AboutUs>
             },
             {
