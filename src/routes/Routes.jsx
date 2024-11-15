@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "../pages/Home";
+// import ShopNow from "../pages/ShopNow";
 import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import ProductDetails from "../pages/ProductDetails";
@@ -11,13 +12,14 @@ import Accessories from "../components/categoriesComponents/Accessories";
 import SmartWatch from "../components/categoriesComponents/SmartWatch";
 import Macbook from "../components/categoriesComponents/Macbook";
 import Iphone from "../components/categoriesComponents/Iphone";
-// import ShopNow from "../pages/ShopNow";
 import AboutUs from "../pages/AboutUs";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <NotFoundPage></NotFoundPage>,
         children: [
             {
                 path: '/',
@@ -28,29 +30,29 @@ const router = createBrowserRouter([
                         element: <AllProducts></AllProducts>
                     },
                     {
-                        path: '/:laptops',
+                        path: '/laptops',
                         element: <Laptops></Laptops>
                     },
                     {
-                        path: '/:phones',
+                        path: '/phones',
                         element: <Phone></Phone>
                     },
                     {
-                        path: '/:accessories',
+                        path: '/accessories',
                         element: <Accessories></Accessories>
                     },
                     {
-                        path: '/:smartwatch',
+                        path: '/smartwatches',
                         element: <SmartWatch></SmartWatch>
                     },
                     {
-                        path: '/:macbook',
+                        path: '/macbook',
                         element: <Macbook></Macbook>
                     },
                     {
-                        path: '/:iphone',
+                        path: '/iphone',
                         element: <Iphone></Iphone>
-                    }
+                    },
                 ],
             },
             // {
@@ -97,6 +99,10 @@ const router = createBrowserRouter([
                 path: '/Product details/:product_id',
                 loader: () => fetch('/allProductApi.json'),
                 element: <ProductDetails></ProductDetails>
+            },
+            {
+                path: '*',
+                element: <NotFoundPage></NotFoundPage>,
             },
         ],
     },

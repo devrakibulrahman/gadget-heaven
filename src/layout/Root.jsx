@@ -1,8 +1,8 @@
-import { Outlet, useLocation } from 'react-router-dom';
-import { LoadData } from '../../constants/ContextApi.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 import Modal from '../components/Modal.jsx';
+import { Outlet, useLocation } from 'react-router-dom';
+import { LoadData } from '../../constants/ContextApi.jsx';
 import { CartProvider } from '../../constants/CartContext.jsx';
 import { ToastContainer } from 'react-toastify';
 import { WishListProvider } from '../../constants/WishListContext.jsx';
