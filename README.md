@@ -12,7 +12,7 @@ Gadget Heaven is an innovative e-commerce platform specializing in the sale of t
 
 ### Here is the Requirement docs in this site
 
-* file:///C:/Users/User/Downloads/Batch-10_Assignment-08.pdf
+* https://drive.google.com/file/d/1y-kXOauNPJlmMTWRI6pkfjNRogoFUU0Z/view
 
 ---
 
@@ -40,15 +40,13 @@ React Router Dom is the best routing system in React js. It's very easy to use i
 
 ---
 
-
-
 ## What I am using for managing data in this React JS Project ?
 
-First of all I'm using browser local storeage for managing data storing. And I am also using the Context Api for pass data, one to another componenets without props driling. So honstly I am using store data in the Local Storeage. 
+First of all I'm using browser local storeage for managing data storing. And I am also using the Context Api for pass data, one to another componenets without props driling. So honstly I am using store data in the Local Storeage.
 
 ---
 
-## Let's talk about feature in this website 
+## Let's talk about feature in this website
 
 This is the e-commerce website. Basically e-commerce website should be better the UI/UX experience. It's design lock clean and users attraction.
 
