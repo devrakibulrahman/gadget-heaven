@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import { BiSolidStar, BiSolidStarHalf, BiStar } from "react-icons/bi";
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { useLoaderData } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../constants/CartContext';
 import { addDataToLocalStore, addDataToWishlistLocalStore } from '../utilities/LocalStore';
 import { toast } from 'react-toastify';
 import { WishListContext } from '../../constants/WishListContext';
+import { PriceContext } from '../../constants/PriceContext';
 
 const ProductDetailsCard = ({idFromURL}) => {
     const data = useLoaderData();
@@ -17,6 +18,7 @@ const ProductDetailsCard = ({idFromURL}) => {
     const {productWishList, setProductWishList} = useContext(WishListContext);
     const {saveWishListData} = useContext(WishListContext);
     const {handleAddPrice} = useContext(CartContext);
+    const {handleGenerateRandomNum} = useContext(PriceContext);
 
     const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
     const findProductId = saveWishListData.find((productId) => productId.product_id === idFromURL.product_id);
@@ -26,8 +28,8 @@ const ProductDetailsCard = ({idFromURL}) => {
 
     const {product_title, product_image, price, description, Specification, availability, rating} = findProductDetails;
 
-    const handleCart = (cartId, saveCartDataIds, data) => {
-
+    
+    const handleCart = (cartId, saveCartDataIds, addPrice) => {
         if(saveCartDataIds.includes(cartId.product_id)){
             toast.warn('Already Add To Cart !!', {
                 position: "top-center",
@@ -56,9 +58,11 @@ const ProductDetailsCard = ({idFromURL}) => {
             
             const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
-            addDataToLocalStore(cartId);           
+            addDataToLocalStore(cartId);
+            handleAddPrice(addPrice)    
         };
     };
+
 
     const handleWishlist = (wishlistId, saveWishlistDataIds) => {
         if(saveWishlistDataIds.includes(wishlistId.product_id)){
@@ -146,10 +150,10 @@ const ProductDetailsCard = ({idFromURL}) => {
                         </div>
                         <div className={`w-full flex items-center gap-x-3 mt-3 md:gap-x-4 md:mt-4`}>
                             <div className={`w-auto`}>
-                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, saveCartData), handleAddPrice(price)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
-                                    <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
+                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, price), handleGenerateRandomNum()}} disabled={availability ? false : true} className={`w-auto h-[45px] px-[22px] ${availability ? 'bg-[#9538E2] border-[#9538E2]' : 'bg-[#F7F7F7] border-black/30'} flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]`}>
+                                    <span className={`font-sora text-sm leading-[26px] font-bold ${availability ? 'text-white' : 'text-[#09080FCC]'} md:text-base lg:text-lg`}>Add To Cart</span>
                                     <div className={`w-auto`}>
-                                        <RiShoppingCartLine color={`#fff`} size={22}/>
+                                        <RiShoppingCartLine color={`${availability ? '#fff' : '#09080FCC'}`} size={22}/>
                                     </div>
                                 </button>
                             </div>

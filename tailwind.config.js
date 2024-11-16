@@ -13,10 +13,10 @@ export default {
   		backgroundImage: {
   			banner: 'url(./assets/img/banner.jpg)',
 			congrates: 'url(./assets/congrates.png)',
-			img1: 'url(./assets/img4.jpg)',
-			img2: 'url(./assets/img3.jpg)',
-			img3: 'url(./assets/img2.jpg)',
-			img4: 'url(./assets/img1.jpg)',
+			img1: 'url(./assets/img4.webp)',
+			img2: 'url(./assets/img3.webp)',
+			img3: 'url(./assets/img2.webp)',
+			img4: 'url(./assets/img1.webp)',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

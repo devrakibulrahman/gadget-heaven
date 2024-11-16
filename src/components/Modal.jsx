@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Modal = () => {
     const backToHome = useNavigate();
     const {item} = useContext(PriceContext);
+
     const totalPrice = item.reduce((total, curr) => total + curr, 0);
 
     const handleBackToHome = () => {

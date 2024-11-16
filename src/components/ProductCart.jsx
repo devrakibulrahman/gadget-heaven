@@ -5,7 +5,6 @@ import ProductCartCard from "./ProductCartCard";
 const ProductCart = () => {
     const {saveCartData} = useContext(CartContext);
     
-    // console.log(saveCartData)
     return (
         <div className={`w-full flex flex-col items-center justify-center gap-y-5 md:gap-y-4 lg:gap-y-6`}>
             {

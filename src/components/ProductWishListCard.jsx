@@ -16,7 +16,7 @@ const ProductWishListCard = ({wishlist}) => {
         
         if(saveCartDataIds.includes(cartId.product_id)){
             toast.warn('Already Add to Cart !!', {
-                position: "top-center",
+                position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: false,
@@ -30,7 +30,7 @@ const ProductWishListCard = ({wishlist}) => {
 
         if(!saveCartDataIds.includes(cartId.product_id)){
             toast.success('Add to cart successful',{
-                position: "top-center",
+                position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: false,
@@ -64,7 +64,7 @@ const ProductWishListCard = ({wishlist}) => {
                         <p className={`font-sora text-base leading-[30px] font-medium text-[#09080FCC] md:text-lg lg:text-xl`}>Price: ${wishlist.price}</p>
                     </div>
                     <div className={`w-auto mt-4 flex items-center justify-between`}>
-                        <button onClick={() => {handleCart(wishlist, saveCartDataIds), handleAddToCartFromWishlist(wishlist)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
+                        <button onClick={() => {handleCart(wishlist, saveCartDataIds), handleAddToCartFromWishlist(wishlist), handleDeleteDataToWishlist(wishlist)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
                             <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
                         </button>
                         <div className={`w-auto sm:hidden`}>

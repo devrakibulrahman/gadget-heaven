@@ -7,28 +7,13 @@ import ProductCart from "../components/ProductCart";
 import ProductWishList from "../components/ProductWishList";
 import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
 import { CartToWishlistSwitcher } from '/constants/CartAndWishlist';
-import { ScrollRestoration } from 'react-router-dom';
+import { ScrollRestoration, useLocation } from 'react-router-dom';
 
 const Dashboard = () => {
-    // const [cartTabActive, setCartTabActive] = useState(true);
-    // const [wishListActive, setWishListActive] = useState(false);
     const {saveCartData, sortByDescendingPrice} = useContext(CartContext);
-    const {deleteDataToClickPurchase, handleAddPrice} = useContext(CartContext);
+    const {deleteDataToClickPurchase} = useContext(CartContext);
     const {handleTabBtn, cartTabActive, wishListActive} = useContext(CartToWishlistSwitcher);
-
-    // const handleCartTab = (str) => {
-    //     if(str === 'cart'){
-    //         setCartTabActive(true);
-    //         setWishListActive(false);
-    //         return;
-    //     };
-
-    //     if(str === 'wishlist'){
-    //         setCartTabActive(false);
-    //         setWishListActive(true);
-    //         return;
-    //     };
-    // };
+    const pageLocation = useLocation();
 
     const productPrice = saveCartData.map((productPrice) => productPrice.price);
     const totalPrice = productPrice.reduce((total, curr) => total + curr, 0);
@@ -104,7 +89,7 @@ const Dashboard = () => {
                     <div className={`w-full mt-[50px]`}>
                         <div className={`container mx-auto px-4`}>
                             <div className={`w-full`}>
-                                {cartTabActive && <ProductCart></ProductCart>}
+                                {(pageLocation.pathname === '/dashboard' && cartTabActive) && <ProductCart></ProductCart>}
                                 {wishListActive && <ProductWishList></ProductWishList>}
                             </div>
                         </div>

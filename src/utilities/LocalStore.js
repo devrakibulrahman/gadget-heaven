@@ -86,4 +86,11 @@ const deleteTotalPriceToLocalStore = () => {
     localStorage.removeItem('TotalPrice');
 };
 
-export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore, getDataFromWishlistToLocalStore, setDataToWishlistLocalStore, addDataToWishlistLocalStore, deleteDataFromWishlist, getTotalPriceDataFromLocalStore, setTotalPriceDataToLocalStore, addTotalPriceToSetItem, deleteTotalPriceToLocalStore };
+// delete specific price data from local store ------>
+const deleteSpecificPriceToLocalStore = (specificPrice) => {
+    const getPrice = getTotalPriceDataFromLocalStore();
+    const deleteData = getPrice.filter((priceData) => specificPrice.includes(priceData));
+    setTotalPriceDataToLocalStore(deleteData);
+};
+
+export { getDataFromCartToLocalStore, setDataToCartLocalStore, addDataToLocalStore, deleteDataFromLocalStore, getDataFromWishlistToLocalStore, setDataToWishlistLocalStore, addDataToWishlistLocalStore, deleteDataFromWishlist, getTotalPriceDataFromLocalStore, setTotalPriceDataToLocalStore, addTotalPriceToSetItem, deleteTotalPriceToLocalStore, deleteSpecificPriceToLocalStore };

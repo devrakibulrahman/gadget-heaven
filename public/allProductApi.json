@@ -132,7 +132,7 @@
       "A16 Bionic chip",
       "256 GB storage"
     ],
-    "availability": true,
+    "availability": false,
     "rating": 4.5
   },
   {
@@ -183,7 +183,7 @@
       "Advanced health sensors (ECG, blood oxygen)",
       "Water resistant up to 50 meters"
     ],
-    "availability": true,
+    "availability": false,
     "rating": 4.7
   },
   {
@@ -200,7 +200,7 @@
       "Heart rate and ECG monitoring",
       "Water resistant up to 50 meters"
     ],
-    "availability": true,
+    "availability": false,
     "rating": 4.6
   },
   {
@@ -285,7 +285,7 @@
       "512 GB SSD",
       "10-core GPU"
     ],
-    "availability": true,
+    "availability": false,
     "rating": 4.6
   },
   {

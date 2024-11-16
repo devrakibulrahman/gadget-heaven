@@ -13,7 +13,7 @@ const CartProvider = ({children}) => {
         const removeData = saveCartData.filter((remData) => remData.product_id !== data.product_id);
         if(removeData){
             toast.success('Delete From Cart !!', {
-                position: "top-center",
+                position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: false,
