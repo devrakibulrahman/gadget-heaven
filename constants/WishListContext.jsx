@@ -1,7 +1,7 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { deleteDataFromWishlist, getDataFromWishlistToLocalStore } from "../src/utilities/LocalStore";
+import { addTotalPriceToSetItem, deleteDataFromWishlist, getDataFromWishlistToLocalStore, getTotalPriceDataFromLocalStore } from "../src/utilities/LocalStore";
 import { toast } from "react-toastify";
 
 const WishListContext = createContext();
@@ -34,6 +34,14 @@ const WishListProvider = ({children}) => {
         deleteDataFromWishlist(data);
     };
 
+    const getPriceData = getTotalPriceDataFromLocalStore();
+    const handleAddPrice = (price, priceData) => {
+        if(priceData.includes(price)){
+            return;
+        };
+        addTotalPriceToSetItem(price);
+    };
+
     useEffect(() => {
         fetch('/allProductApi.json')
             .then((res) => res.json())
@@ -58,7 +66,7 @@ const WishListProvider = ({children}) => {
     }, [productWishList]);
 
     return(
-        <WishListContext.Provider value={{saveWishListData, productWishList, setProductWishList, handleDeleteDataToWishlist, handleAddToCartFromWishlist}}>
+        <WishListContext.Provider value={{saveWishListData, productWishList, setProductWishList, handleDeleteDataToWishlist, handleAddToCartFromWishlist, handleAddPrice, getPriceData}}>
             {children}
         </WishListContext.Provider>
     );

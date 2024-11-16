@@ -69,9 +69,9 @@ const Navbar = () => {
                             <nav className={`w-full`}>
                                 <ul className={`w-full flex justify-center flex-col`}>
                                     <NavLink to='/' onClick={() => {handleNavActive(), handleTabBtn('cart')}} className={`font-sora text-base leading-[26px] ${pathname === '/' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Home</NavLink>
+                                    <NavLink to='/about%20us' onClick={handleNavActive} className={`font-sora text-base leading-[26px] ${pathname === '/about%20us' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>About Us</NavLink>
                                     <NavLink to='/statistics' onClick={handleNavActive} className={`font-sora text-base leading-[26px] ${pathname === '/statistics' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Statistics</NavLink>
                                     <NavLink to='/dashboard' onClick={() => {handleGenerateRandomNum(), handleNavActive()}} className={`font-sora text-base leading-[26px] ${pathname === '/dashboard' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>Dashboard</NavLink>
-                                    <NavLink to='/about%20us' onClick={handleNavActive} className={`font-sora text-base leading-[26px] ${pathname === '/about%20us' ? 'font-bold text-[#9538E2]' : 'font-normal text-black/50'} pl-7 border-b border-black/30 py-[18px]`}>About Us</NavLink>
                                 </ul>
                             </nav>
                         </div>
