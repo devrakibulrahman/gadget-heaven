@@ -1,5 +1,5 @@
 import '../css/style.css';
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import AllProducts from "../components/categoriesComponents/AllProducts";
 import Laptops from "../components/categoriesComponents/Laptops";
@@ -9,6 +9,7 @@ import SmartWatch from "../components/categoriesComponents/SmartWatch";
 import Macbook from "../components/categoriesComponents/Macbook";
 import Iphone from "../components/categoriesComponents/Iphone";
 import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
+import Monitor from '../components/categoriesComponents/Monitor';
 
 const Home = () => {
     const cateNavigate = useNavigate();
@@ -70,7 +71,8 @@ const Home = () => {
                                             <button onClick={() => handleCateNavigate('accessories')} className={`font-sora text-sm leading-[26px] ${pageLocation.pathname === '/accessories' ? 'font-extrabold text-white bg-[#9538E2]' : 'font-medium text-[#09080F99] bg-[#09080F0D]'} flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Accessories</button>
                                             <button onClick={() => handleCateNavigate('smartwatches')} className={`font-sora text-sm leading-[26px] ${pageLocation.pathname === '/smartwatches' ? 'font-extrabold text-white bg-[#9538E2]' : 'font-medium text-[#09080F99] bg-[#09080F0D]'} flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>Smart Watches</button>
                                             <button onClick={() => handleCateNavigate('macbook')} className={`font-sora text-sm leading-[26px] ${pageLocation.pathname === '/macbook' ? 'font-extrabold text-white bg-[#9538E2]' : 'font-medium text-[#09080F99] bg-[#09080F0D]'} flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start md:text-base lg:text-lg`}>MacBook</button>
-                                            <button onClick={() => handleCateNavigate('iphone')} className={`font-sora text-sm leading-[26px] ${pageLocation.pathname === '/iphone' ? 'font-extrabold text-white bg-[#9538E2]' : 'font-medium text-[#09080F99] bg-[#09080F0D]'} flex justify-center items-center col-span-2 sm:pl-7 rounded-[32px] h-[52px] sm:justify-start sm:col-span-1 md:text-base lg:text-lg`}>Iphone</button>
+                                            <button onClick={() => handleCateNavigate('iphone')} className={`font-sora text-sm leading-[26px] ${pageLocation.pathname === '/iphone' ? 'font-extrabold text-white bg-[#9538E2]' : 'font-medium text-[#09080F99] bg-[#09080F0D]'} flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start sm:col-span-1 md:text-base lg:text-lg`}>Iphone</button>
+                                            <button onClick={() => handleCateNavigate('monitor')} className={`font-sora text-sm leading-[26px] ${pageLocation.pathname === '/monitor' ? 'font-extrabold text-white bg-[#9538E2]' : 'font-medium text-[#09080F99] bg-[#09080F0D]'} flex justify-center items-center sm:pl-7 rounded-[32px] h-[52px] sm:justify-start sm:col-span-1 md:text-base lg:text-lg`}>Monitor</button>
                                         </div>
                                     </div>
                                     <div className={`w-full`}>
@@ -81,6 +83,7 @@ const Home = () => {
                                         {pageLocation.pathname === '/smartwatches' && <SmartWatch/>}
                                         {pageLocation.pathname === '/macbook' && <Macbook/>}
                                         {pageLocation.pathname === '/iphone' && <Iphone/>}
+                                        {pageLocation.pathname === '/monitor' && <Monitor cate={"Monitor"}/>}
                                     </div>
                                 </div>
                             </div>

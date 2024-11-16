@@ -14,6 +14,7 @@ import Macbook from "../components/categoriesComponents/Macbook";
 import Iphone from "../components/categoriesComponents/Iphone";
 import AboutUs from "../pages/AboutUs";
 import NotFoundPage from "../pages/NotFoundPage";
+import Monitor from "../components/categoriesComponents/Monitor";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
                         path: '/iphone',
                         element: <Iphone></Iphone>
                     },
+                    {
+                        path: '/monitor',
+                        element: <Monitor></Monitor>
+                    }
                 ],
             },
             // {
