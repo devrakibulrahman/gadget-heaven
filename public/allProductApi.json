@@ -4,7 +4,7 @@
     "product_title": "Samsung Galaxy S23 Ultra",
     "product_image": "https://i.ibb.co.com/12yZTSh/Samsung-Galaxy-S23-Ultra.jpg",
     "category": "phones",
-    "price": 60,
+    "price": 500,
     "description": "The Samsung Galaxy S23 Ultra comes with a powerful Snapdragon processor, high-resolution display, and advanced camera technology.",
     "Specification": [
       "6.8-inch Dynamic AMOLED display",
@@ -21,7 +21,7 @@
     "product_title": "Samsung Galaxy S24 Ultra",
     "product_image": "https://i.ibb.co.com/HxzNxss/Samsung-Galaxy-S24-Ultra.jpg",
     "category": "phones",
-    "price": 80,
+    "price": 800,
     "description": "The next-gen Samsung Galaxy S24 Ultra offers cutting-edge performance, superior camera systems, and a sleek design.",
     "Specification": [
       "6.9-inch Dynamic AMOLED display",
@@ -38,7 +38,7 @@
     "product_title": "Google Pixel 9 Pro XL",
     "product_image": "https://i.ibb.co.com/310tH6m/Google-Pixel9-Pro-XL.jpg",
     "category": "phones",
-    "price": 50,
+    "price": 850,
     "description": "Google Pixel 9 Pro XL features an enhanced camera system and optimized performance with the latest Android software.",
     "Specification": [
       "6.7-inch OLED display",
@@ -55,7 +55,7 @@
     "product_title": "Google Pixel 9",
     "product_image": "https://i.ibb.co.com/0rgPHnb/Google-Pixel9.jpg",
     "category": "phones",
-    "price": 75,
+    "price": 750,
     "description": "Google Pixel 9 brings the best of Google's camera software and AI features in a compact form.",
     "Specification": [
       "6.4-inch OLED display",
@@ -72,7 +72,7 @@
     "product_title": "Google Pixel 9 Pro",
     "product_image": "https://i.ibb.co.com/cxdsgSx/Google-Pixel9-Pro.jpg",
     "category": "phones",
-    "price": 80,
+    "price": 820,
     "description": "Google Pixel 9 Pro combines powerful hardware and Google's best camera software for professional-level photography.",
     "Specification": [
       "6.5-inch OLED display",
@@ -89,7 +89,7 @@
     "product_title": "iPhone 16",
     "product_image": "https://i.ibb.co.com/zr4Xg3h/iphone16.jpg",
     "category": ["phones", "iphone"],
-    "price": 100,
+    "price": 1120,
     "description": "iPhone 16 features Apple's latest technology, offering unparalleled performance and camera quality.",
     "Specification": [
       "6.7-inch Super Retina XDR display",
@@ -106,7 +106,7 @@
     "product_title": "iPhone 14",
     "product_image": "https://i.ibb.co.com/1r42F79/iphone14.jpg",
     "category": ["phones", "iphone"],
-    "price": 78,
+    "price": 1000,
     "description": "iPhone 14 offers excellent performance with the A15 Bionic chip and a brilliant camera setup.",
     "Specification": [
       "6.1-inch Super Retina XDR display",
@@ -123,7 +123,7 @@
     "product_title": "iPhone 15",
     "product_image": "https://i.ibb.co.com/cymTB3c/iphone15.jpg",
     "category": ["phones", "iphone"],
-    "price": 90,
+    "price": 1100,
     "description": "The iPhone 15 features a sleek design, advanced camera system, and Apple's A16 Bionic chip for superior performance. It introduces USB-C connectivity and improved battery life for a better user experience.",
     "Specification": [
       "6.1-inch Super Retina XDR display",
@@ -140,7 +140,7 @@
     "product_title": "Apple Watch SE 2",
     "product_image": "https://i.ibb.co.com/g624tzM/Apple-Watch-SE2.jpg",
     "category": "smartwatches",
-    "price": 65,
+    "price": 200,
     "description": "The Apple Watch SE 2 combines essential features for a great smartwatch experience with advanced health and fitness tracking.",
     "Specification": [
       "Retina display",
@@ -157,7 +157,7 @@
     "product_title": "Apple Watch Ultra 2",
     "product_image": "https://i.ibb.co.com/pfxpmf3/Apple-Watch-Ultra2.jpg",
     "category": "smartwatches",
-    "price": 95,
+    "price": 250,
     "description": "The Apple Watch Ultra 2 is designed for adventurers and athletes, offering rugged design and advanced performance features.",
     "Specification": [
       "49mm titanium case",
@@ -174,7 +174,7 @@
     "product_title": "Apple Watch Series 10",
     "product_image": "https://i.ibb.co.com/NVgwZgQ/Apple-Watch-Series10.webp",
     "category": "smartwatches",
-    "price": 75,
+    "price": 300,
     "description": "The Apple Watch Series 10 comes with cutting-edge health monitoring features, an improved processor, and a sleek design.",
     "Specification": [
       "Always-On Retina display",
@@ -191,7 +191,7 @@
     "product_title": "Samsung Galaxy Watch 6 Classic",
     "product_image": "https://i.ibb.co.com/z5Y60cg/Samsung-Galaxy-Watch6-Classic.jpg",
     "category": "smartwatches",
-    "price": 58,
+    "price": 225,
     "description": "The Samsung Galaxy Watch 6 Classic offers a premium design, powerful health features, and smooth integration with the Samsung ecosystem.",
     "Specification": [
       "Rotating bezel",
@@ -208,7 +208,7 @@
     "product_title": "Surface Laptop Studio 2",
     "product_image": "https://i.ibb.co.com/Fh5qHyY/Surface-Laptop-Studio2.webp",
     "category": "laptops",
-    "price": 68,
+    "price": 1300,
     "description": "The Surface Laptop Studio 2 is a 2-in-1 device with a tilting touchscreen and strong performance. It’s ideal for creative tasks and multitasking.",
     "Specification": [
       "14.4-inch PixelSense touchscreen display",
@@ -225,7 +225,7 @@
     "product_title": "Surface Laptop Go 3",
     "product_image": "https://i.ibb.co.com/4J5SZhb/Surface-Laptop-Go3.jpg",
     "category": "laptops",
-    "price": 70,
+    "price": 1050,
     "description": "Surface Laptop Go 3 is a lightweight and portable laptop designed for everyday tasks with a responsive touch display.",
     "Specification": [
       "12.4-inch PixelSense touchscreen display",
@@ -242,7 +242,7 @@
     "product_title": "Microsoft Surface Laptop 7th Edition",
     "product_image": "https://i.ibb.co.com/T4WTsFZ/Microsoft-Surface-Laptop7th-Edition.jpg",
     "category": "laptops",
-    "price": 85,
+    "price": 1223,
     "description": "The 7th Edition of the Microsoft Surface Laptop offers powerful performance and a sleek design ideal for work and play.",
     "Specification": [
       "13.5-inch PixelSense display",
@@ -259,7 +259,7 @@
     "product_title": "MacBook Pro M3",
     "product_image": "https://i.ibb.co.com/dthnc5D/Mac-Book-Pro-M3-Chip.jpg",
     "category": ["laptops", "macbook"],
-    "price": 115,
+    "price": 1890,
     "description": "The MacBook Pro M3 is equipped with the latest Apple Silicon chip for unrivaled performance and power efficiency, perfect for intensive professional use.",
     "Specification": [
       "16-inch Liquid Retina XDR display",
@@ -276,7 +276,7 @@
     "product_title": "MacBook Air",
     "product_image": "https://i.ibb.co.com/LtM2K1W/Mac-Book-Air.jpg",
     "category": ["laptops", "macbook"],
-    "price": 98,
+    "price": 1700,
     "description": "The MacBook Air is known for its thin and lightweight design, featuring Apple's M-series chip for smooth multitasking and efficiency.",
     "Specification": [
       "13.6-inch Liquid Retina display",
@@ -293,7 +293,7 @@
     "product_title": "MacBook Pro",
     "product_image": "https://i.ibb.co.com/zhVMtxy/Mac-Book-Pro.jpg",
     "category": ["laptops", "macbook"],
-    "price": 120,
+    "price": 1895,
     "description": "The MacBook Pro offers powerful performance with the M-series chip, excellent display quality, and advanced audio features.",
     "Specification": [
       "14-inch Liquid Retina XDR display",
@@ -310,7 +310,7 @@
     "product_title": "Sony Alpha 1 (A1)",
     "product_image": "https://i.ibb.co.com/71Qy1bL/Sony-Alpha1-a1.jpg",
     "category": "accessories",
-    "price": 96,
+    "price": 955,
     "description": "The Sony Alpha 1 (A1) is a flagship 50.1MP mirrorless camera with 8K video and high-speed shooting, designed for top-tier professional performance.",
     "Specification": [
       "50.1 MP full-frame stacked Exmor RS CMOS sensor",
@@ -327,7 +327,7 @@
     "product_title": "Sony A7R V",
     "product_image": "https://i.ibb.co.com/qsCncfC/Sony-A7-R-V.jpg",
     "category": "accessories",
-    "price": 63,
+    "price": 753,
     "description": "The Sony A7R V is a 61MP mirrorless camera with advanced AI autofocus, perfect for detailed professional photography.",
     "Specification": [
       "61 MP full-frame back-illuminated Exmor R CMOS sensor",
@@ -344,7 +344,7 @@
     "product_title": "Nikon Z9",
     "product_image": "https://i.ibb.co.com/7RwDnHN/NikonZ9.jpg",
     "category": "accessories",
-    "price": 82,
+    "price": 854,
     "description": "The Nikon Z9 is a professional full-frame mirrorless camera with groundbreaking features, designed for both photography and video professionals.",
     "Specification": [
       "45.7 MP full-frame stacked CMOS sensor",
@@ -361,7 +361,7 @@
     "product_title": "AirPods 4",
     "product_image": "https://i.ibb.co.com/xJvcKRd/AirPods4.jpg",
     "category": "accessories",
-    "price": 73,
+    "price": 125,
     "description": "The AirPods 4 offer an immersive sound experience with enhanced noise cancellation and a longer battery life, designed for seamless integration with Apple devices.",
     "Specification": [
       "Active Noise Cancellation",
@@ -378,7 +378,7 @@
     "product_title": "Galaxy Buds 3 Pro",
     "product_image": "https://i.ibb.co.com/FxQHvVz/Galaxy-Buds3-Pro.webp",
     "category": "accessories",
-    "price": 56,
+    "price": 80,
     "description": "Galaxy Buds 3 Pro are premium earbuds from Samsung with excellent sound quality, adaptive ANC, and a comfortable fit.",
     "Specification": [
       "Adaptive Active Noise Cancellation",

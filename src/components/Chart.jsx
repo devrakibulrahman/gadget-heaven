@@ -11,16 +11,16 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { name: "Samsung", price: 80, total: 25, rating: 4.9 },
-  { name: "Iphone", price: 100, total: 150, rating: 4.9 },
-  { name: "Google", price: 80, total: 130, rating: 4.7 },
-  { name: "Apple Watch", price: 98, total: 120, rating: 4.8 },
-  { name: "Samsung Galaxy Watch ", price: 58, total: 50, rating: 4.6 },
-  { name: "Surface Laptop", price: 85, total: 75, rating: 4.7 },
-  { name: "MacBook", price: 115, total: 180, rating: 4.9 },
-  { name: "Cameras", price: 96, total: 60, rating: 4.9 },
-  { name: "Buds", price: 73, total: 190, rating: 4.7 },
-  { name: "Accessories", price: 200, total: 180, rating: 4.0 },
+  { name: "Samsung", price: 800, total: 1500, rating: 4.9 },
+  { name: "Iphone", price: 1120, total: 1800, rating: 4.9 },
+  { name: "Google", price: 850, total: 1400, rating: 4.7 },
+  { name: "Apple Watch", price: 300, total: 1200, rating: 4.8 },
+  { name: "Samsung Galaxy Watch ", price: 225, total: 800, rating: 4.6 },
+  { name: "Surface Laptop", price: 1300, total: 650, rating: 4.7 },
+  { name: "MacBook", price: 1890, total: 1700, rating: 4.9 },
+  { name: "Cameras", price: 955, total: 1100, rating: 4.9 },
+  { name: "Buds", price: 125, total: 300, rating: 4.7 },
+  { name: "Accessories", price: 800, total: 1950, rating: 4.0 },
 ]
 
 const chartConfig = {
