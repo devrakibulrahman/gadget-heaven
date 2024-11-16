@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import PropTypes from 'prop-types';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CartToWishlistSwitcher = createContext();
 
@@ -8,6 +8,7 @@ const CartToWishlistSwitcherProvider = ({children}) => {
     const [cartTabActive, setCartTabActive] = useState(true);
     const [wishListActive, setWishListActive] = useState(false);
     const pageNavigate = useNavigate();
+    const pageLocation = useLocation();
 
     const handleTabBtn = (str) => {
         if(str === 'cart'){
@@ -39,7 +40,7 @@ const CartToWishlistSwitcherProvider = ({children}) => {
     };
 
     return(
-        <CartToWishlistSwitcher.Provider value={{cartTabActive, wishListActive, handleTabBtn, handleIconBtn}}>
+        <CartToWishlistSwitcher.Provider value={{cartTabActive, wishListActive, handleTabBtn, handleIconBtn, pageLocation}}>
             {children}
         </CartToWishlistSwitcher.Provider>
     );

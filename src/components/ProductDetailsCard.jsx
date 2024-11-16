@@ -17,7 +17,7 @@ const ProductDetailsCard = ({idFromURL}) => {
     const {saveCartData} = useContext(CartContext);
     const {productWishList, setProductWishList} = useContext(WishListContext);
     const {saveWishListData} = useContext(WishListContext);
-    const {handleAddPrice} = useContext(CartContext);
+    const {handleAddItemPrice} = useContext(CartContext);
     const {handleGenerateRandomNum} = useContext(PriceContext);
 
     const findProductDetails = data.find((product) => product.product_id === idFromURL.product_id);
@@ -59,7 +59,7 @@ const ProductDetailsCard = ({idFromURL}) => {
             const newCartData = [...productCart, cartId];
             setProductCart(newCartData);
             addDataToLocalStore(cartId);
-            handleAddPrice(addPrice)    
+            handleAddItemPrice(addPrice)    
         };
     };
 
@@ -150,10 +150,10 @@ const ProductDetailsCard = ({idFromURL}) => {
                         </div>
                         <div className={`w-full flex items-center gap-x-3 mt-3 md:gap-x-4 md:mt-4`}>
                             <div className={`w-auto`}>
-                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, price), handleGenerateRandomNum()}} disabled={availability ? false : true} className={`w-auto h-[45px] px-[22px] ${availability ? 'bg-[#9538E2] border-[#9538E2]' : 'bg-[#F7F7F7] border-black/30'} flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]`}>
-                                    <span className={`font-sora text-sm leading-[26px] font-bold ${availability ? 'text-white' : 'text-[#09080FCC]'} md:text-base lg:text-lg`}>Add To Cart</span>
+                                <button onClick={() => {handleCart(idFromURL, saveCartDataIds, price), handleGenerateRandomNum()}} className={`w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]`}>
+                                    <span className={`font-sora text-sm leading-[26px] font-bold text-white text-[#09080FCC] md:text-base lg:text-lg`}>Add To Cart</span>
                                     <div className={`w-auto`}>
-                                        <RiShoppingCartLine color={`${availability ? '#fff' : '#09080FCC'}`} size={22}/>
+                                        <RiShoppingCartLine color={'#fff'} size={22}/>
                                     </div>
                                 </button>
                             </div>

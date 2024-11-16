@@ -5,11 +5,13 @@ import { CartContext } from "../../constants/CartContext";
 import { toast } from "react-toastify";
 import { addDataToLocalStore } from "../utilities/LocalStore";
 import PropTypes from 'prop-types';
+import { PriceContext } from "../../constants/PriceContext";
 
 const ProductWishListCard = ({wishlist}) => {
     const {handleDeleteDataToWishlist, handleAddToCartFromWishlist, handleAddPrice, getPriceData} = useContext(WishListContext);
     const {productCart, setProductCart} = useContext(CartContext);
     const {saveCartData} = useContext(CartContext);
+    const {handleGenerateRandomNum} = useContext(PriceContext);
 
     const saveCartDataIds = saveCartData.map((ids) => ids.product_id);
     const handleCart = (cartId, saveCartDataIds) => {
@@ -54,7 +56,7 @@ const ProductWishListCard = ({wishlist}) => {
                     <div className={`w-full flex items-center justify-between mb-3 md:mb-[18px]`}>
                         <h1 className={`font-sora text-lg leading-[20px] font-semibold text-[#09080F] md:text-xl md:leading-[30px] lg:text-2xl`}>{wishlist.product_title}</h1>
                         <div className={`w-auto hidden sm:block`}>
-                            <button onClick={() => handleDeleteDataToWishlist(wishlist)} className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
+                            <button onClick={() => {handleDeleteDataToWishlist(wishlist), handleGenerateRandomNum()}} className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
                         </div>
                     </div>
                     <div className={`w-full mb-2 md:max-w-[850px] md:mb-3 lg:mb-4`}>
@@ -64,11 +66,11 @@ const ProductWishListCard = ({wishlist}) => {
                         <p className={`font-sora text-base leading-[30px] font-medium text-[#09080FCC] md:text-lg lg:text-xl`}>Price: ${wishlist.price}</p>
                     </div>
                     <div className={`w-auto mt-4 flex items-center justify-between`}>
-                        <button onClick={() => {handleCart(wishlist, saveCartDataIds), handleAddToCartFromWishlist(wishlist), handleDeleteDataToWishlist(wishlist), handleAddPrice(wishlist.price, getPriceData)}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
+                        <button onClick={() => {handleCart(wishlist, saveCartDataIds), handleAddToCartFromWishlist(wishlist), handleDeleteDataToWishlist(wishlist), handleAddPrice(wishlist.price, getPriceData), handleGenerateRandomNum()}} className='w-auto h-[45px] px-[22px] bg-[#9538E2] flex items-center gap-x-[10px] border border-[#9538E2] rounded-full md:h-[48px]'>
                             <span className={`font-sora text-sm leading-[26px] font-bold text-white md:text-base lg:text-lg`}>Add To Cart</span>
                         </button>
                         <div className={`w-auto sm:hidden`}>
-                            <button onClick={() => handleDeleteDataToWishlist(wishlist)} className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
+                            <button onClick={() => {handleDeleteDataToWishlist(wishlist), handleGenerateRandomNum()}} className={`w-[26px] h-[26px] border border-red-500 flex items-center justify-center rounded-full text-red-500 bg-white transition duration-300 ease-in-out hover:bg-red-500 hover:text-white`}><MdOutlineClose/></button>
                         </div>
                     </div>
                 </div>

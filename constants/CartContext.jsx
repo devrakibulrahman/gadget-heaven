@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { getDataFromCartToLocalStore, deleteDataFromLocalStore, setDataToCartLocalStore, addTotalPriceToSetItem } from "../src/utilities/LocalStore";
+import { getDataFromCartToLocalStore, deleteDataFromLocalStore, setDataToCartLocalStore, addTotalPriceToSetItem, getTotalPriceDataFromLocalStore } from "../src/utilities/LocalStore";
 import { toast } from "react-toastify";
 
 const CartContext = createContext();
@@ -40,7 +40,15 @@ const CartProvider = ({children}) => {
         setDataToCartLocalStore(filterPurchaseData);
     };
     
-    const handleAddPrice = (price) => {
+    const handleAddItemPrice = (price) => {
+        addTotalPriceToSetItem(price);
+    };
+
+    const getPriceData = getTotalPriceDataFromLocalStore();
+    const handleAddPrice = (price, prideData) => {
+        if(prideData.includes(price)){
+            return;
+        };
         addTotalPriceToSetItem(price);
     };
 
@@ -68,7 +76,7 @@ const CartProvider = ({children}) => {
     }, [productCart])
 
     return(
-        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice, deleteDataToClickPurchase, handleAddPrice }}>
+        <CartContext.Provider value={{productCart, setProductCart, saveCartData, setSaveCartData, handleDeleteToCart, sortByDescendingPrice, deleteDataToClickPurchase, handleAddPrice, getPriceData, handleAddItemPrice }}>
             {children}
         </CartContext.Provider>
     );

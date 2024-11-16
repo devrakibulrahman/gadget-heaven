@@ -8,11 +8,13 @@ import ProductWishList from "../components/ProductWishList";
 import DynamicTitle from '../components/DynamicTitleComponents/DynamicTitle';
 import { CartToWishlistSwitcher } from '/constants/CartAndWishlist';
 import { ScrollRestoration, useLocation } from 'react-router-dom';
+import { PriceContext } from '../../constants/PriceContext';
 
 const Dashboard = () => {
     const {saveCartData, sortByDescendingPrice} = useContext(CartContext);
     const {deleteDataToClickPurchase} = useContext(CartContext);
     const {handleTabBtn, cartTabActive, wishListActive} = useContext(CartToWishlistSwitcher);
+    const {handleGenerateRandomNum} = useContext(PriceContext);
     const pageLocation = useLocation();
 
     const productPrice = saveCartData.map((productPrice) => productPrice.price);
@@ -67,7 +69,7 @@ const Dashboard = () => {
                                                     </button>
                                                 </div>
                                                 <div className={`w-auto`}>
-                                                    <button onClick={() => {deleteDataToClickPurchase(saveCartData), document.getElementById('my_modal_4').showModal()}} disabled={saveCartData.length ? false : true} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
+                                                    <button onClick={() => {deleteDataToClickPurchase(saveCartData), handleGenerateRandomNum(), document.getElementById('my_modal_4').showModal()}} disabled={saveCartData.length ? false : true} className={`${saveCartData.length ? 'radial-btn' : 'bg-black/10'} w-[130px] h-[48px] rounded-full flex items-center justify-center p-[2px] md:w-[140px] md:h-[50px] lg:w-[150px] lg:h-[52px]`}>
                                                         <div className={`${saveCartData.length ? 'btn-bg-primary' : 'bg-black/30'} flex items-center justify-center bg-white w-full h-full rounded-full`}>
                                                             <span className={`font-sora text-sm leading-[26px] font-normal ${saveCartData.length ? 'text-white' : 'text-black/30'} md:text-base lg:text-lg`}>Purchase</span>
                                                         </div>
