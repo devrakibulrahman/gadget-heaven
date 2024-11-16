@@ -56,7 +56,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <div className={`w-auto lg:hidden`} onClick={handleNavActive}>
-                                    <i className={`ri-menu-fill text-2xl ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone') ? 'text-white' : 'text-[#0B0B0B]'} cursor-pointer`}></i>
+                                    <i className={`ri-menu-fill text-2xl ${(pathname === '/' || pathname === '/laptops' || pathname === '/phones' || pathname === '/accessories' || pathname === '/smartwatches' || pathname === '/macbook' || pathname === '/iphone' || pathname === '/monitor') ? 'text-white' : 'text-[#0B0B0B]'} cursor-pointer`}></i>
                                 </div>
                             </div>
                         </div>
@@ -77,8 +77,7 @@ const Navbar = () => {
                         </div>
                         <div className={`w-full absolute left-0 bottom-[20px]`}>
                             <p className={`font-sora text-sm text-center text-black/30 flex items-center justify-center gap-x-[7px]`}>
-                                <i className="ri-copyright-line"></i>
-                                <span>Copyright 2024 - {new Date().getFullYear()} All right reserved</span>
+                                <span><i className="ri-copyright-line"></i> Copyright 2024 - {new Date().getFullYear()} All right reserved Gadget-Heaven</span>
                             </p>
                         </div>
                     </div>

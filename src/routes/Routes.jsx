@@ -15,12 +15,13 @@ import Iphone from "../components/categoriesComponents/Iphone";
 import AboutUs from "../pages/AboutUs";
 import NotFoundPage from "../pages/NotFoundPage";
 import Monitor from "../components/categoriesComponents/Monitor";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
-        errorElement: <NotFoundPage></NotFoundPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
